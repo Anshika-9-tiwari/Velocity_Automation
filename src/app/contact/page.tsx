@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import PageBanner from '@/components/pageBanner';
 import {
+  Alert,
   Box,
   Button,
   Card,
@@ -15,15 +16,12 @@ import {
   MenuItem,
   Select,
   Snackbar,
-  Alert,
   Stack,
   TextField,
   Typography,
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import { Grid } from '@mui/material';
-
 import {
   AccessTime as AccessTimeIcon,
   Email as EmailIcon,
@@ -50,9 +48,6 @@ export default function ContactPage() {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
-    setForm({ ...form, [e.target.name]: e.target.value });
-
-  const handleSelectChange = (e: any) =>
     setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -98,8 +93,10 @@ export default function ContactPage() {
           We’d love to hear from you! Fill out the form and we’ll get back to you shortly.
         </Typography>
 
-        <Grid container spacing={6} direction="column">
-          <Grid item xs={12}>
+        {/* === Vertical stack instead of Grid === */}
+        <Stack spacing={6}>
+          {/* Contact info + map */}
+          <Box>
             <Card sx={{ p: 5, mb: 3 }}>
               <CardContent>
                 <Box display="flex" alignItems="center" mb={2}>
@@ -138,9 +135,7 @@ export default function ContactPage() {
                     Office Hours
                   </Typography>
                 </Box>
-                <Typography sx={{ pl: 4, borderBottom: 1 }}>
-                  Mon – Sat: 9 AM – 6 PM
-                </Typography>
+                <Typography sx={{ pl: 4, borderBottom: 1 }}>Mon – Sat: 9 AM – 6 PM</Typography>
               </CardContent>
             </Card>
 
@@ -156,119 +151,118 @@ export default function ContactPage() {
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </Card>
-          </Grid>
+          </Box>
 
-          <Grid item xs={12}>
-            <Card sx={{ p: 5, borderRadius: 3, boxShadow: 3 }}>
-              <Box component="form" noValidate onSubmit={handleSubmit}>
-                <Stack spacing={2}>
-                  <TextField
-                    label="First Name"
-                    name="first_name"
-                    fullWidth
-                    value={form.first_name}
+          {/* Contact form */}
+          <Card sx={{ p: 5, borderRadius: 3, boxShadow: 3 }}>
+            <Box component="form" noValidate onSubmit={handleSubmit}>
+              <Stack spacing={2}>
+                <TextField
+                  label="First Name"
+                  name="first_name"
+                  fullWidth
+                  value={form.first_name}
+                  onChange={handleChange}
+                  required
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <PersonIcon />
+                      </InputAdornment>
+                    ),
+                  }}
+                />
+                <TextField
+                  label="Last Name"
+                  name="last_name"
+                  fullWidth
+                  value={form.last_name}
+                  onChange={handleChange}
+                  required
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <PersonIcon />
+                      </InputAdornment>
+                    ),
+                  }}
+                />
+                <TextField
+                  label="Email"
+                  name="email_id"
+                  type="email"
+                  fullWidth
+                  value={form.email_id}
+                  onChange={handleChange}
+                  required
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <EmailIcon />
+                      </InputAdornment>
+                    ),
+                  }}
+                />
+                <TextField
+                  label="Phone No"
+                  name="phone_no"
+                  fullWidth
+                  value={form.phone_no}
+                  onChange={handleChange}
+                  required
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <PhoneIcon />
+                      </InputAdornment>
+                    ),
+                  }}
+                />
+                <FormControl fullWidth required>
+                  <InputLabel>Course</InputLabel>
+                  <Select
+                    name="course_name"
+                    value={form.course_name}
                     onChange={handleChange}
-                    required
-                    InputProps={{
-                      startAdornment: (
-                        <InputAdornment position="start">
-                          <PersonIcon />
-                        </InputAdornment>
-                      ),
-                    }}
-                  />
-                  <TextField
-                    label="Last Name"
-                    name="last_name"
-                    fullWidth
-                    value={form.last_name}
-                    onChange={handleChange}
-                    required
-                    InputProps={{
-                      startAdornment: (
-                        <InputAdornment position="start">
-                          <PersonIcon />
-                        </InputAdornment>
-                      ),
-                    }}
-                  />
-                  <TextField
-                    label="Email"
-                    name="email_id"
-                    type="email"
-                    fullWidth
-                    value={form.email_id}
-                    onChange={handleChange}
-                    required
-                    InputProps={{
-                      startAdornment: (
-                        <InputAdornment position="start">
-                          <EmailIcon />
-                        </InputAdornment>
-                      ),
-                    }}
-                  />
-                  <TextField
-                    label="Phone No"
-                    name="phone_no"
-                    fullWidth
-                    value={form.phone_no}
-                    onChange={handleChange}
-                    required
-                    InputProps={{
-                      startAdornment: (
-                        <InputAdornment position="start">
-                          <PhoneIcon />
-                        </InputAdornment>
-                      ),
-                    }}
-                  />
-                  <FormControl fullWidth required>
-                    <InputLabel>Course</InputLabel>
-                    <Select
-                      name="course_name"
-                      value={form.course_name}
-                      onChange={handleSelectChange}
-                      label="Course"
-                    >
-                      <MenuItem value="Automation">Automation</MenuItem>
-                      <MenuItem value="Industrial Automation">Industrial Automation</MenuItem>
-                      <MenuItem value="PLC Networking">PLC Networking</MenuItem>
-                      <MenuItem value="Process Instrumentation">Process Instrumentation</MenuItem>
-                    </Select>
-                  </FormControl>
-                  <TextField
-                    label="Message"
-                    name="message"
-                    multiline
-                    rows={4}
-                    fullWidth
-                    value={form.message}
-                    onChange={handleChange}
-                    required
-                    InputProps={{
-                      startAdornment: (
-                        <InputAdornment position="start">
-                          <MessageIcon />
-                        </InputAdornment>
-                      ),
-                    }}
-                  />
-                  <Button
-                    type="submit"
-                    variant="contained"
-                    color="success"
-                    disabled={loading}
-                    fullWidth
-                    sx={{ py: 1.5, fontWeight: 'bold', fontSize: '1rem', borderRadius: 2 }}
+                    label="Course"
                   >
-                    {loading ? <CircularProgress size={24} color="inherit" /> : 'Send Message'}
-                  </Button>
-                </Stack>
-              </Box>
-            </Card>
-          </Grid>
-        </Grid>
+                    <MenuItem value="Automation">Automation</MenuItem>
+                    <MenuItem value="Industrial Automation">Industrial Automation</MenuItem>
+                    <MenuItem value="PLC Networking">PLC Networking</MenuItem>
+                    <MenuItem value="Process Instrumentation">Process Instrumentation</MenuItem>
+                  </Select>
+                </FormControl>
+                <TextField
+                  label="Message"
+                  name="message"
+                  multiline
+                  rows={4}
+                  fullWidth
+                  value={form.message}
+                  onChange={handleChange}
+                  required
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <MessageIcon />
+                      </InputAdornment>
+                    ),
+                  }}
+                />
+                <Button
+                  type="submit"
+                  variant="contained"
+                  color="success"
+                  disabled={loading}
+                  fullWidth
+                  sx={{ py: 1.5, fontWeight: 'bold', fontSize: '1rem', borderRadius: 2 }}
+                >
+                  {loading ? <CircularProgress size={24} color="inherit" /> : 'Send Message'}
+                </Button>
+              </Stack>
+            </Box>
+          </Card>
+        </Stack>
 
         <Snackbar open={snack} autoHideDuration={3000} onClose={() => setSnack(false)}>
           <Alert severity="success">Message sent successfully!</Alert>
