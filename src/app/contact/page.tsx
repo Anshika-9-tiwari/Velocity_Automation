@@ -10,7 +10,6 @@ import {
   CircularProgress,
   Container,
   FormControl,
-  Grid,
   InputAdornment,
   InputLabel,
   MenuItem,
@@ -23,6 +22,8 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
+import { Grid } from '@mui/material';
+
 import {
   AccessTime as AccessTimeIcon,
   Email as EmailIcon,
@@ -30,7 +31,7 @@ import {
   Message as MessageIcon,
   Person as PersonIcon,
   Phone as PhoneIcon,
-  School as SchoolIcon, // imported in case you need it later
+  School as SchoolIcon,
 } from '@mui/icons-material';
 
 export default function ContactPage() {
@@ -49,6 +50,9 @@ export default function ContactPage() {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+    setForm({ ...form, [e.target.name]: e.target.value });
+
+  const handleSelectChange = (e: any) =>
     setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -87,7 +91,6 @@ export default function ContactPage() {
       />
 
       <Container maxWidth="xl" sx={{ py: 6, my: 6, bgcolor: 'white', color: 'black' }}>
-        {/* Heading */}
         <Typography variant="h4" align="center" fontWeight="bold" color="primary" gutterBottom>
           Get in Touch With Us
         </Typography>
@@ -96,7 +99,6 @@ export default function ContactPage() {
         </Typography>
 
         <Grid container spacing={6} direction="column">
-          {/* Contact Info + Map */}
           <Grid item xs={12}>
             <Card sx={{ p: 5, mb: 3 }}>
               <CardContent>
@@ -136,7 +138,9 @@ export default function ContactPage() {
                     Office Hours
                   </Typography>
                 </Box>
-                <Typography sx={{ pl: 4, borderBottom: 1 }}>Mon – Sat: 9 AM – 6 PM</Typography>
+                <Typography sx={{ pl: 4, borderBottom: 1 }}>
+                  Mon – Sat: 9 AM – 6 PM
+                </Typography>
               </CardContent>
             </Card>
 
@@ -154,12 +158,10 @@ export default function ContactPage() {
             </Card>
           </Grid>
 
-          {/* Contact Form */}
           <Grid item xs={12}>
             <Card sx={{ p: 5, borderRadius: 3, boxShadow: 3 }}>
               <Box component="form" noValidate onSubmit={handleSubmit}>
                 <Stack spacing={2}>
-                  {/* First Name */}
                   <TextField
                     label="First Name"
                     name="first_name"
@@ -175,8 +177,6 @@ export default function ContactPage() {
                       ),
                     }}
                   />
-
-                  {/* Last Name */}
                   <TextField
                     label="Last Name"
                     name="last_name"
@@ -192,8 +192,6 @@ export default function ContactPage() {
                       ),
                     }}
                   />
-
-                  {/* Email */}
                   <TextField
                     label="Email"
                     name="email_id"
@@ -210,8 +208,6 @@ export default function ContactPage() {
                       ),
                     }}
                   />
-
-                  {/* Phone */}
                   <TextField
                     label="Phone No"
                     name="phone_no"
@@ -227,20 +223,13 @@ export default function ContactPage() {
                       ),
                     }}
                   />
-
-                  {/* Course */}
                   <FormControl fullWidth required>
                     <InputLabel>Course</InputLabel>
                     <Select
                       name="course_name"
                       value={form.course_name}
-                      onChange={handleChange}
+                      onChange={handleSelectChange}
                       label="Course"
-                      startAdornment={
-                        <InputAdornment position="start">
-                          <SchoolIcon />
-                        </InputAdornment>
-                      }
                     >
                       <MenuItem value="Automation">Automation</MenuItem>
                       <MenuItem value="Industrial Automation">Industrial Automation</MenuItem>
@@ -248,8 +237,6 @@ export default function ContactPage() {
                       <MenuItem value="Process Instrumentation">Process Instrumentation</MenuItem>
                     </Select>
                   </FormControl>
-
-                  {/* Message */}
                   <TextField
                     label="Message"
                     name="message"
@@ -267,8 +254,6 @@ export default function ContactPage() {
                       ),
                     }}
                   />
-
-                  {/* Submit */}
                   <Button
                     type="submit"
                     variant="contained"
@@ -285,7 +270,6 @@ export default function ContactPage() {
           </Grid>
         </Grid>
 
-        {/* Snackbar */}
         <Snackbar open={snack} autoHideDuration={3000} onClose={() => setSnack(false)}>
           <Alert severity="success">Message sent successfully!</Alert>
         </Snackbar>
