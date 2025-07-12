@@ -1,38 +1,4 @@
-// 'use client';
-// import PageBanner from '@/components/pageBanner';
-// import { Box, Container, Typography } from '@mui/material';
 
-// export default function PLCNetworking() {
-//   return (
-//      <>
-//       <Box component="main">
-//           <PageBanner
-//             title="PLC Networking Training"
-//             description='Transforming manufacturing with PLC, SCADA, robotics and Industry 4.0 integration'
-//             imageUrl="https://i.pinimg.com/736x/56/d8/a1/56d8a14df98686062ee2367a10514052.jpg" 
-//           />
-//         <Box sx={{ py: 10 }}>
-//           <Container>
-//             <Typography variant="h4" fontWeight="bold" gutterBottom>
-//               PLC Networking
-//             </Typography>
-//             <Typography variant="body1" mt={2}>
-//               Understand how PLCs communicate within industrial networks including protocols, topology, and integration with SCADA/HMI.
-//             </Typography>
-//             <Typography variant="body2" mt={3}>
-//               Course highlights:
-//               <ul>
-//                 <li>Modbus, Profibus, Ethernet/IP</li>
-//                 <li>PLC to SCADA Communication</li>
-//                 <li>Network Design & Troubleshooting</li>
-//               </ul>
-//             </Typography>
-//           </Container>
-//         </Box>
-//       </Box>
-//      </>
-//   );
-// }
 'use client';
 
 import PageBanner from '@/components/pageBanner';

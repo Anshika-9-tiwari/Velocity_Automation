@@ -13,7 +13,6 @@
 
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { 
   MdContactEmergency, 
   MdOutlineSecurity, 
@@ -90,7 +89,7 @@ const Security = () => {
             ].map((item, i) => (
               <motion.div 
                 key={i}
-                className="card bg-base-100 p-6 shadow-md bg-white"
+                className="card bg-base-50 p-6 shadow-m"
                 whileHover={{ scale: 1.05 }}
               >
                 {item.icon}

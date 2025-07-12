@@ -1,16 +1,3 @@
-//  import PageBanner from '@/components/pageBanner';
-      
-
-// 'use client';
-// import { Box, Container, Typography } from '@mui/material';
-
-// export default function ProcessInstrumentation() {
-//   return (
-//       <>
-//         <Box component="main">
-
-
-//                 Master process instruments used in pressure, temperature, level, and flow measurement. Ideal for process control engineers and technicians.
 
 'use client';
 

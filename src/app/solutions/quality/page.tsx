@@ -75,7 +75,7 @@ export default function QualityInspection() {
                 <motion.div
                   key={i}
                   whileHover={{ scale: 1.03 }}
-                  className="card bg-base-100 shadow-md p-5 items-center text-center border-t-amber-700 bg-white"
+                  className="card bg-base-50 shadow-md p-5 items-center text-center border-t-amber-700"
                 >
                   {item.icon}
                   <h3 className="font-semibold text-lg mb-1 text-blue-900">{item.title}</h3>

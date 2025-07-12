@@ -2,7 +2,7 @@
 
 import PageBanner from '@/components/pageBanner';
 import ContactComponent from '../../contact/contactcomponent';
-import IndustryFeatureSection from '@/components/industryfeature'; //reuseable
+import IndustryFeatureSection from '@/components/industryfeature'; 
 import { motion } from 'framer-motion';
 
 const Industries = () => {

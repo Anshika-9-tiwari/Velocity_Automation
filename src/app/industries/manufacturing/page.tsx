@@ -2,7 +2,6 @@
 
 import PageBanner from '@/components/pageBanner';
 import ContactComponent from '../../contact/contactcomponent';
-import IndstryFeatureSection from '@/components/industryfeature';
 import IndustryFeatureSection from '@/components/industryfeature';
 import { motion } from 'framer-motion';
 

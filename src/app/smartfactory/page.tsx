@@ -1,6 +1,7 @@
 'use client';
 import PageBanner from '@/components/pageBanner';
-import { Box, Container, Typography, Grid } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
+import Grid from '@mui/material/Grid';
 import { motion } from 'framer-motion';
 import ContactComponent from '../contact/contactcomponent';
 
@@ -23,7 +24,7 @@ export default function SmartFactory() {
             transform your plant into an intelligent and efficient ecosystem.
           </Typography>
           <Grid container spacing={4} mt={5} justifyContent="center">
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} md={5} component={'div'}>
               <Box sx={{ background: '#fff', p: 4, borderRadius: 4, boxShadow: 3 }}>
                 <Typography variant="h6" fontWeight="bold">
                   IoT-Based Automation
@@ -33,7 +34,7 @@ export default function SmartFactory() {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} md={5} component={'div'}>
               <Box sx={{ background: '#fff', p: 4, borderRadius: 4, boxShadow: 3 }}>
                 <Typography variant="h6" fontWeight="bold">
                   Smart Worker
@@ -43,7 +44,7 @@ export default function SmartFactory() {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} md={5} component={'div'}>
               <Box sx={{ background: '#fff', p: 4, borderRadius: 4, boxShadow: 3 }}>
                 <Typography variant="h6" fontWeight="bold">
                   Smart Vision
@@ -53,7 +54,7 @@ export default function SmartFactory() {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} md={5} component={'div'}>
               <Box sx={{ background: '#fff', p: 4, borderRadius: 4, boxShadow: 3 }}>
                 <Typography variant="h6" fontWeight="bold">
                   Smart Security
@@ -63,7 +64,7 @@ export default function SmartFactory() {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} md={5} component={'div'}>
               <Box sx={{ background: '#fff', p: 4, borderRadius: 4, boxShadow: 3 }}>
                 <Typography variant="h6" fontWeight="bold">
                   Smart Machine

@@ -1,7 +1,8 @@
 // components/Footer.js
 "use client";
 
-import { Box, Grid, Typography, Link as MuiLink, IconButton } from "@mui/material";
+import { Box, Typography, Link as MuiLink, IconButton } from "@mui/material";
+import Grid from "@mui/material/Grid";
 import Image from "next/image";
 import Link from "next/link";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -16,7 +17,7 @@ export default function Footer() {
     <Box sx={{ backgroundColor: "black", mt: 4, py: 4, px: 2, color:'white'}}>
       <Grid container spacing={4} justifyContent="space-between" >
         {/* Logo */}
-        <Grid item xs={12} md={3}>
+        <Grid item xs={12} md={3} component={'div'}>
           <Image src="/4bg.png" alt="Company Logo" width={150} height={40} />
           <Typography variant="body2" sx={{ mt: 2 , lineHeight:'2'}}>
             KP Automation is a leading provider of industrial automation solutions,<br/> specializing in smart factory technologies and corporate training programs.<br/>specializing in smart factory technologies and corporate training programs.
@@ -24,20 +25,20 @@ export default function Footer() {
         </Grid>
 
         {/* Navigation Links */}
-        <Grid item xs={12} md={3}>
+        <Grid item xs={12} md={3} component={'div'}>
           <Typography variant="h5" gutterBottom color="orange">Quick Links</Typography>
           <Box display="flex" flexDirection="column" gap={1}>
             <Link href="/" passHref><MuiLink underline="none" color="white">Home</MuiLink></Link>
-            <Link href="/solutions" passHref><MuiLink underline="none"color="white">Solution</MuiLink></Link>
+            <Link href="/solutions/people" passHref><MuiLink underline="none"color="white">Solution</MuiLink></Link>
             <Link href="/corporatetraining" passHref><MuiLink underline="none"color="white">Corporate Training</MuiLink></Link>
             <Link href="/smartfactory" passHref><MuiLink underline="none"color="white">Smart Factory</MuiLink></Link>
-            <Link href="/industries" passHref><MuiLink underline="none"color="white">Industry</MuiLink></Link>
+            <Link href="/industries/automotive" passHref><MuiLink underline="none"color="white">Industry</MuiLink></Link>
             <Link href="/contact" passHref><MuiLink underline="none"color="white">Contact</MuiLink></Link>
           </Box>
         </Grid>
 
         {/* Contact Info */}
-        <Grid item xs={12} md={3} >
+        <Grid item xs={12} md={3} component={'div'}>
           <Typography variant="h5" gutterBottom color="orange">Contact Us</Typography>
           <Typography variant="body2" lineHeight={2}><PhoneIcon className=" mt-1" /> Phone:  +91 63972 06850</Typography>
           <Typography variant="body2" lineHeight={3}><EmailIcon className=" mt-1"/> Email:  kpautomation@gmail.com</Typography>
@@ -45,7 +46,7 @@ export default function Footer() {
         </Grid>
 
         {/* Social Media */}
-        <Grid item xs={12} md={3}>
+        <Grid item xs={12} md={3} component={'div'}>
           <Typography variant="h5" gutterBottom color="orange">Follow Us</Typography>
           <Box display="flex" gap={1}>
             <IconButton component="a" href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
