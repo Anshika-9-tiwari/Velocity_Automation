@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import PageBanner from '@/components/pageBanner';
+ import type { SelectChangeEvent } from '@mui/material/Select';
 import {
   Alert,
   Box,
@@ -47,8 +48,18 @@ export default function ContactPage() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
-    setForm({ ...form, [e.target.name]: e.target.value });
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+  //   setForm({ ...form, [e.target.name]: e.target.value });
+ 
+
+  const handleChange = (
+    e:
+      | React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+      | SelectChangeEvent
+  ) => {
+    const { name, value } = e.target as HTMLInputElement;
+    setForm({ ...form, [name]: value });
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -226,9 +237,12 @@ export default function ContactPage() {
                     onChange={handleChange}
                     label="Course"
                   >
-                    <MenuItem value="Automation">Automation</MenuItem>
-                    <MenuItem value="Industrial Automation">Industrial Automation</MenuItem>
+                    <MenuItem value="Automation">Industrial Automation</MenuItem>
+                    <MenuItem value="Industrial Automation">Drives & Motor</MenuItem>
                     <MenuItem value="PLC Networking">PLC Networking</MenuItem>
+                    <MenuItem value="PLC Programing">PLC Programing</MenuItem>
+                    <MenuItem value="SCADA & HMI">SCADA & HMI</MenuItem>
+                    <MenuItem value="Servo Motor">Servo Motor</MenuItem>
                     <MenuItem value="Process Instrumentation">Process Instrumentation</MenuItem>
                   </Select>
                 </FormControl>
