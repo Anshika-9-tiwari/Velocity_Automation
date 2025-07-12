@@ -3,22 +3,31 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
-const cardVariants = {
+// Properly typed cardVariants
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 40 },
-  visible: (i: number) => ({
+  visible: (i = 1) => ({
     opacity: 1,
     y: 0,
     transition: {
       delay: i * 0.15,
       duration: 0.6,
-      ease: [0.4, 0, 0.2, 1], 
+      ease: [0.4, 0, 0.2, 1] as [number, number, number, number], // Typed as tuple
     },
   }),
 };
 
-const SmartCard = ({ image, title, index }: { image: string; title: string; index: number }) => (
+const SmartCard = ({
+  image,
+  title,
+  index,
+}: {
+  image: string;
+  title: string;
+  index: number;
+}) => (
   <motion.div
     custom={index}
     variants={cardVariants}

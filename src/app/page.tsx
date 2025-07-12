@@ -15,8 +15,8 @@ import {
   Card,
   CardContent,
   Link,
-  Grid,
 } from '@mui/material';
+import Grid from '@mui/material/Grid';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { motion } from 'framer-motion';
 import PageBanner from '@/components/pageBanner';
@@ -92,13 +92,13 @@ const Solutions = () => {
 
       <Box sx={{ bgcolor: 'white' }}>
         {/* SOLUTIONS SECTION */}
-        <Box sx={{ bgcolor: 'white', py: 8, px: { xs: 2, sm: 4, md: 6 }, color: 'black' }}>
+        <Box sx={{ py: 8, px: { xs: 2, sm: 4, md: 6 }, color: 'black' }}>
           <Container maxWidth="xl">
             <Typography
               variant="h4"
               fontWeight="bold"
               mb={8}
-              sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' }, color: 'black' }}
+              sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' } }}
             >
               Revolutionize Digitally with Industry Solutions
             </Typography>
@@ -123,14 +123,7 @@ const Solutions = () => {
                     const flip = isEvenRow ? isLeft : !isLeft;
 
                     return (
-                      <Grid
-                        item
-                        xs={12}
-                        sm={12}
-                        md={6}
-                        key={solution.title}
-                        component="div"
-                      >
+                      <Grid item xs={12} sm={12} md={6} key={solution.title} component={'div' as any}>
                         <Box
                           sx={{
                             display: 'flex',
@@ -192,7 +185,7 @@ const Solutions = () => {
 
         {/* CORPORATE TRAINING SECTION */}
         <Box sx={{ bgcolor: '#f9f9f9', py: 8, color: 'black' }}>
-          <Container sx={{ px: { xs: 2, sm: 3, md: 4 }, mx: 'auto' }}>
+          <Container sx={{ px: { xs: 2, sm: 3, md: 4 } }}>
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }}>
               <Typography variant="h4" gutterBottom sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' } }}>
                 Corporate Training
@@ -210,7 +203,7 @@ const Solutions = () => {
             </motion.div>
           </Container>
 
-          <Container sx={{ py: 5, px: { xs: 2, sm: 3, md: 4 }, mx: 'auto' }}>
+          <Container sx={{ py: 5 }}>
             <Grid container spacing={{ xs: 3, md: 2 }} justifyContent="center">
               {[
                 { title: 'PLC Networking', icon: <Hub fontSize="large" className="text-red-400" /> },
@@ -218,10 +211,10 @@ const Solutions = () => {
                 { title: 'SCADA & HMI', icon: <AutoAwesome fontSize="large" className="text-red-400" /> },
                 { title: 'Servo Motor', icon: <Business fontSize="large" className="text-red-400" /> },
                 { title: 'Process Instrumentation', icon: <WorkspacePremium fontSize="large" className="text-red-400" /> },
-                { title: 'Industrial Automation ', icon: <FactCheck fontSize="large" className="text-red-400" /> },
+                { title: 'Industrial Automation', icon: <FactCheck fontSize="large" className="text-red-400" /> },
                 { title: 'Drives & Motors', icon: <Handyman fontSize="large" className="text-red-400" /> },
               ].map(({ title, icon }) => (
-                <Grid item xs={12} sm={10} md={4} key={title} sx={{ mx: 'auto' }} component="div">
+                <Grid item xs={12} sm={10} md={4} key={title} component={'div' as any}>
                   <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
                     <Card sx={{ textAlign: 'center', py: 3, px: 2 }}>
                       {icon}
@@ -242,7 +235,7 @@ const Solutions = () => {
         </Box>
 
         {/* SMART FACTORY SECTION */}
-        <Container sx={{ py: 8, px: { xs: 2, sm: 3, md: 4 }, mx: 'auto', bgcolor: 'white', color: 'black' }}>
+        <Container sx={{ py: 8, color: 'black' }}>
           <motion.div initial={{ x: -100, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 1 }}>
             <Typography variant="h4" gutterBottom sx={{ textAlign: 'center', fontSize: { xs: '1.75rem', md: '2.25rem' } }}>
               Smart Factory
@@ -260,21 +253,21 @@ const Solutions = () => {
           </motion.div>
         </Container>
 
-        {/* INDUSTRY SECTION */}
+        {/* INDUSTRIES SECTION */}
         <Box sx={{ bgcolor: '#f5f5f5', py: 8, color: 'black' }}>
-          <Container sx={{ px: { xs: 2, sm: 3, md: 4 }, mx: 'auto' }}>
+          <Container>
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }}>
-              <Typography variant="h4" gutterBottom sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' } }} mb={5}>
+              <Typography variant="h4" gutterBottom sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' }, mb: 5 }}>
                 Industries We Serve
               </Typography>
-              <Grid container spacing={{ xs: 3, md: 5 }} justifyContent="center" >
+              <Grid container spacing={{ xs: 3, md: 5 }} justifyContent="center">
                 {[
                   { name: 'Warehouse & Logistics', icon: <Fastfood className="text-red-500" />, link: '/industries/warehouse-and-logistics' },
                   { name: 'Manufacturing Industry', icon: <MedicalInformation className="text-red-500" />, link: '/industries/manufacturing' },
                   { name: 'Food & Beverages', icon: <ElectricBolt className="text-red-500" />, link: '/industries/food-and-beverages' },
                   { name: 'Automotive Industry', icon: <Engineering className="text-red-500" />, link: '/industries/automotive' },
                 ].map(({ name, icon, link }) => (
-                  <Grid item xs={6} sm={6} md={3} key={name} sx={{ mx: 'auto' }} component="div">
+                  <Grid item xs={6} sm={6} md={3} key={name} component={'div' as any}>
                     <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
                       <Card sx={{ textAlign: 'center', py: 3, px: 2 }}>
                         {icon}
@@ -297,7 +290,12 @@ const Solutions = () => {
         </Box>
 
         {/* CONTACT CTA */}
-        <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+        <motion.div 
+        initial={{ opacity: 0, y: 50 }} 
+        whileInView={{ opacity: 1, y: 0 }} 
+        viewport={{ once: true }} 
+        transition={{ duration: 0.6 }}
+        >
           <ContactComponent />
         </motion.div>
       </Box>

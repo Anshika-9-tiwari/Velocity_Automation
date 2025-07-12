@@ -24,7 +24,7 @@ export default function SmartFactory() {
             transform your plant into an intelligent and efficient ecosystem.
           </Typography>
           <Grid container spacing={4} mt={5} justifyContent="center">
-            <Grid item xs={12} md={5} component={'div'}>
+            <Grid item xs={12} md={5} component={'div' as any}>
               <Box sx={{ background: '#fff', p: 4, borderRadius: 4, boxShadow: 3 }}>
                 <Typography variant="h6" fontWeight="bold">
                   IoT-Based Automation
@@ -34,7 +34,7 @@ export default function SmartFactory() {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={12} md={5} component={'div'}>
+            <Grid item xs={12} md={5} component={'div' as any}>
               <Box sx={{ background: '#fff', p: 4, borderRadius: 4, boxShadow: 3 }}>
                 <Typography variant="h6" fontWeight="bold">
                   Smart Worker
@@ -44,7 +44,7 @@ export default function SmartFactory() {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={12} md={5} component={'div'}>
+            <Grid item xs={12} md={5} component={'div' as any}>
               <Box sx={{ background: '#fff', p: 4, borderRadius: 4, boxShadow: 3 }}>
                 <Typography variant="h6" fontWeight="bold">
                   Smart Vision
@@ -54,7 +54,7 @@ export default function SmartFactory() {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={12} md={5} component={'div'}>
+            <Grid item xs={12} md={5} component={'div' as any}>
               <Box sx={{ background: '#fff', p: 4, borderRadius: 4, boxShadow: 3 }}>
                 <Typography variant="h6" fontWeight="bold">
                   Smart Security
@@ -64,7 +64,7 @@ export default function SmartFactory() {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={12} md={5} component={'div'}>
+            <Grid item xs={12} md={5} component={'div' as any}>
               <Box sx={{ background: '#fff', p: 4, borderRadius: 4, boxShadow: 3 }}>
                 <Typography variant="h6" fontWeight="bold">
                   Smart Machine
