@@ -63,7 +63,7 @@ export default function PeopleSolution() {
           <div className="w-full lg:w-1/2">
             <h1 className="text-3xl font-semibold text-red-400">Industry Redefined</h1>
             <p className="mt-4 text-base text-gray-700 leading-relaxed">
-            KP Automation is a leading technology company focused on delivering cutting-edge solutions and services that empower businesses to prosper in the digital era of Industry.
+            Velocity Automation is a leading technology company focused on delivering cutting-edge solutions and services that empower businesses to prosper in the digital era of Industry.
             </p>
             <Link href={'/industries/automotive'}>
              <button className="btn  mt-6">Learn More</button>
@@ -86,8 +86,8 @@ export default function PeopleSolution() {
             <p className="mt-4 text-base text-gray-700 leading-relaxed">
               We support businesses in effectively managing digital transformation initiatives and achieving tangible growth by harnessing the collective strength of our experience and extensive network of expertise.
             </p>
-            <Link href={'/corporatetraining'}>
-             <button className="btn   mt-6">Get Started</button>
+            <Link href={'/industries/manufacturing'}>
+             <button className="btn   mt-6">Explore more</button>
             </Link>
           </div>
           <div className="w-full lg:w-1/2">

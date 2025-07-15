@@ -79,7 +79,7 @@ const SmartMachine = () => {
       <SmartFactoryCard
         cardData={featureData.map(({ image, title }) => ({ image, title }))}
         pageTitle="Smart Machine Modules"
-        // cardLink="/smart-factory/smart-machine"
+        cardLink="/solutions/machine"
       />
 
       {featureData.map(({ title, image, desc, features }, i) => (

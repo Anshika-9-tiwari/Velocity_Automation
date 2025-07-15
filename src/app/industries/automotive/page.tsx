@@ -4,6 +4,7 @@ import PageBanner from '@/components/pageBanner';
 import ContactComponent from '../../contact/contactcomponent';
 import IndustryFeatureSection from '@/components/industryfeature'; 
 import { motion } from 'framer-motion';
+import CustomersSection from '@/components/ourcustomers';
 
 const Industries = () => {
   const featureData = [
@@ -70,6 +71,11 @@ const Industries = () => {
         >
           <ContactComponent />
         </motion.div>
+
+        {/* Our Customers */}
+        <div>
+          <CustomersSection />
+        </div>
       </div>
     </div>
   );

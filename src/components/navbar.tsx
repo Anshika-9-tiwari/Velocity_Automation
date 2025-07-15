@@ -10,7 +10,6 @@ import {
   Menu,
   MenuItem,
   Container,
-  Typography,
   useMediaQuery,
   useTheme,
   Collapse,
@@ -35,20 +34,18 @@ const Navbar = () => {
       subItems: [
         { label: 'People', link: '/solutions/people' },
         { label: 'Quality', link: '/solutions/quality' },
+        { label: 'Machine', link: '/solutions/machine' },
         { label: 'Security', link: '/solutions/security' },
       ]
     },
     {
-      label: 'Corporate Training',
+      label: 'Products',
       subItems: [
-        { label: 'All Courses', link: '/corporatetraining' },
-        { label: 'Drives & Motors', link: '/corporatetraining/drives-motors' },
-        { label: 'Industrial Automation Training', link: '/corporatetraining/industrial-automation-training' },
-        { label: 'PLC Training', link: '/corporatetraining/plc-training' },
-        { label: 'PLC Networking', link: '/corporatetraining/plcnetworking' },
-        { label: 'Process Instrumentation', link: '/corporatetraining/process-instrumentation' },
-        { label: 'SCADA & HMI', link: '/corporatetraining/scada-and-hmi' },
-        { label: 'Servo & Motor', link: '/corporatetraining/servo-motor' },
+        { label: 'All Products', link: '/products' },
+        { label: 'Siemens', link: '/products/siemens' },
+        { label: 'Delta', link: '/products/delta' },
+        { label: 'Control Panel', link: '/products/control_panel' },
+        { label: 'Services', link: '/products/services' },
       ]
     },
     {
@@ -72,16 +69,7 @@ const Navbar = () => {
     { label: 'Contact', link: '/contact' }
   ];
 
-  const handleClick = (itemLabel: string) => {
-    setAnchorEls((prev) => ({
-      ...prev,
-      [itemLabel]: prev[itemLabel] ? null : document.getElementById(itemLabel),
-    }));
-  };
-
-  const handleClose = () => {
-    setAnchorEls({});
-  };
+  const handleClose = () => setAnchorEls({});
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -98,18 +86,18 @@ const Navbar = () => {
     <AppBar
       position="sticky"
       sx={{
-        bgcolor: '#f5f5f5',
-        color: 'black',
-        boxShadow: 3,
+        bgcolor: '#fefefe',
+        color: '#000',
+        boxShadow: 5,
         top: 0,
         zIndex: 1100,
       }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
-          <Box>
+          <Box sx={{ px: 2, py: 1 }}>
             <Image
-              src="/4bg.png"
+              src="/Velocity-ALogo2.png"
               alt="Logo"
               width={200}
               height={50}
@@ -128,23 +116,40 @@ const Navbar = () => {
           ) : (
             <Box sx={{ display: 'flex', gap: 1 }}>
               {navItems.map((item) => (
-                <Box key={item.label}>
+                <Box
+                  key={item.label}
+                  onMouseEnter={() =>
+                    item.subItems &&
+                    setAnchorEls((prev) => ({
+                      ...prev,
+                      [item.label]: document.getElementById(item.label),
+                    }))
+                  }
+                  onMouseLeave={() =>
+                    item.subItems &&
+                    setAnchorEls((prev) => ({
+                      ...prev,
+                      [item.label]: null,
+                    }))
+                  }
+                >
                   {item.subItems ? (
                     <>
                       <Button
                         id={item.label}
-                        onClick={() => handleClick(item.label)}
                         endIcon={<ExpandMoreIcon />}
-                        sx={{ px: 2 }}
+                        sx={{ px: 2, color: 'black' }}
                       >
                         {item.label}
                       </Button>
+
                       <Menu
                         anchorEl={anchorEls[item.label]}
                         open={Boolean(anchorEls[item.label])}
                         onClose={handleClose}
                         anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
                         transformOrigin={{ vertical: 'top', horizontal: 'left' }}
+                        MenuListProps={{ onMouseLeave: handleClose }}
                         sx={{
                           '& .MuiPaper-root': {
                             minWidth: 200,
@@ -159,6 +164,13 @@ const Navbar = () => {
                             component={Link}
                             href={subItem.link}
                             onClick={handleClose}
+                            sx={{
+                              color: 'gray',
+                              '&:hover': {
+                                backgroundColor: '#f0f0f0',
+                                color: 'black',
+                              },
+                            }}
                           >
                             {subItem.label}
                           </MenuItem>
@@ -169,7 +181,7 @@ const Navbar = () => {
                     <Button
                       component={Link}
                       href={item.link}
-                      sx={{ px: 2 }}
+                      sx={{ px: 2, color: 'red' }}
                     >
                       {item.label}
                     </Button>
@@ -209,7 +221,7 @@ const Navbar = () => {
                             textAlign: 'left',
                             width: '100%',
                             py: 1,
-                            color: 'black'
+                            color: 'red'
                           }}
                         >
                           {subItem.label}

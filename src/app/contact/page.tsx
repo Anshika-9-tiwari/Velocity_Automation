@@ -32,6 +32,7 @@ import {
   Phone as PhoneIcon,
   School as SchoolIcon,
 } from '@mui/icons-material';
+import CustomersSection from '@/components/ourcustomers';
 
 export default function ContactPage() {
   const [form, setForm] = useState({
@@ -39,7 +40,7 @@ export default function ContactPage() {
     last_name: '',
     email_id: '',
     phone_no: '',
-    course_name: '',
+    product_name: '',
     message: '',
   });
   const [loading, setLoading] = useState(false);
@@ -47,10 +48,6 @@ export default function ContactPage() {
 
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
-
-  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
-  //   setForm({ ...form, [e.target.name]: e.target.value });
- 
 
   const handleChange = (
     e:
@@ -77,7 +74,7 @@ export default function ContactPage() {
           last_name: '',
           email_id: '',
           phone_no: '',
-          course_name: '',
+          product_name: '',
           message: '',
         });
       }
@@ -92,11 +89,16 @@ export default function ContactPage() {
     <>
       <PageBanner
         title="Contact Us"
-        imageUrl="https://i.pinimg.com/736x/0f/93/4c/0f934ccb035cce852e5a27a8f4f90e4a.jpg"
+        imageUrl="Contactbanner.jpeg"
         description=""
       />
 
-      <Container maxWidth="xl" sx={{ py: 6, my: 6, bgcolor: 'white', color: 'black' }}>
+      {/* our customers */}
+      <div>
+        <CustomersSection />
+      </div>
+
+      <Container maxWidth="xl" sx={{ py: 0, my: 6, bgcolor: 'white', color: 'black' }}>
         <Typography variant="h4" align="center" fontWeight="bold" color="primary" gutterBottom>
           Get in Touch With Us
         </Typography>
@@ -104,7 +106,6 @@ export default function ContactPage() {
           We’d love to hear from you! Fill out the form and we’ll get back to you shortly.
         </Typography>
 
-        {/* === Vertical stack instead of Grid === */}
         <Stack spacing={6}>
           {/* Contact info + map */}
           <Box>
@@ -117,7 +118,7 @@ export default function ContactPage() {
                   </Typography>
                 </Box>
                 <Typography sx={{ mb: 2, pl: 4, borderBottom: 1 }}>
-                  Block‑C, Landmark Near Indra Park, New Delhi – 110088
+                  Office No 10, Gnd Floor, Plot No. 25-26 , 15/16 Mathura Road Faridabad, Haryana- 121003 (India)
                 </Typography>
 
                 <Box display="flex" alignItems="center" mb={2}>
@@ -127,7 +128,7 @@ export default function ContactPage() {
                   </Typography>
                 </Box>
                 <Typography sx={{ mb: 2, pl: 4, borderBottom: 1 }}>
-                  kpautomation@gmail.com
+                   info@velocityautomation.co.in
                 </Typography>
 
                 <Box display="flex" alignItems="center" mb={2}>
@@ -137,7 +138,7 @@ export default function ContactPage() {
                   </Typography>
                 </Box>
                 <Typography sx={{ mb: 2, pl: 4, borderBottom: 1 }}>
-                  +91 63972 06860
+                  +91 98182 93887 
                 </Typography>
 
                 <Box display="flex" alignItems="center" mb={2}>
@@ -153,7 +154,7 @@ export default function ContactPage() {
             <Card sx={{ overflow: 'hidden', borderRadius: 3, boxShadow: 3 }}>
               <iframe
                 title="Google Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14007.2932107754!2d77.1291838173828!3d28.71548750349674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d01b1f1ec9453%3A0xf8895a9e02fd1ea0!2sIndra%20Park%2C%20Block%20C%2C%20Jahangirpuri%2C%20Delhi%2C%20110088!5e0!3m2!1sen!2sin!4v1719575800000!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14013.118672879325!2d77.29410449499944!3d28.48326890000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d18b7e92e0f95%3A0x911b26a3d60e7a85!2s23%2C%20Mathura%20Rd%2C%20Sector%2028%2C%20Faridabad%2C%20Haryana%20121003!5e0!3m2!1sen!2sin!4v1720942831473!5m2!1sen!2sin"
                 width="100%"
                 height="250"
                 style={{ border: 0 }}
@@ -161,6 +162,7 @@ export default function ContactPage() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
+
             </Card>
           </Box>
 
@@ -230,20 +232,20 @@ export default function ContactPage() {
                   }}
                 />
                 <FormControl fullWidth required>
-                  <InputLabel>Course</InputLabel>
+                  <InputLabel>Products</InputLabel>
                   <Select
-                    name="course_name"
-                    value={form.course_name}
+                    name="product_name"
+                    value={form.product_name}
                     onChange={handleChange}
-                    label="Course"
+                    label="Products"
                   >
-                    <MenuItem value="Automation">Industrial Automation</MenuItem>
-                    <MenuItem value="Industrial Automation">Drives & Motor</MenuItem>
-                    <MenuItem value="PLC Networking">PLC Networking</MenuItem>
-                    <MenuItem value="PLC Programing">PLC Programing</MenuItem>
-                    <MenuItem value="SCADA & HMI">SCADA & HMI</MenuItem>
-                    <MenuItem value="Servo Motor">Servo Motor</MenuItem>
-                    <MenuItem value="Process Instrumentation">Process Instrumentation</MenuItem>
+                    <MenuItem value="Automation">Siemens PLC</MenuItem>
+                    <MenuItem value="Industrial Automation">Siemens HMI</MenuItem>
+                    <MenuItem value="PLC Networking">Siemens AC Drive</MenuItem>
+                    <MenuItem value="PLC Programing">SiemensServo System</MenuItem>
+                    <MenuItem value="SCADA & HMI">Siemens Simatic IPC</MenuItem>
+                    <MenuItem value="Servo Motor">Siemens Simatic SCADA</MenuItem>
+                    <MenuItem value="Process Instrumentation">Simatic IOT2000</MenuItem>
                   </Select>
                 </FormControl>
                 <TextField

@@ -35,6 +35,7 @@ import {
   ArrowForward,
 } from '@mui/icons-material';
 import ContactComponent from '../app/contact/contactcomponent';
+import CustomersSection from '@/components/ourcustomers';
 
 const solutionsData = [
   {
@@ -49,7 +50,7 @@ const solutionsData = [
   },
   {
     title: 'Machine',
-    image: '/serviceengineer.jpg',
+    image: '/condition-based.webp',
     items: [
       'Machine Utilization & Productivity',
       'Condition Based Monitoring',
@@ -64,7 +65,7 @@ const solutionsData = [
   {
     title: 'Quality',
     image: 'https://i.pinimg.com/736x/45/51/9f/45519fedf9dad47bbbd8f79ec518103a.jpg',
-    items: ['Computer Vision based Quality Inspection'],
+    items: ['Computer Vision based Quality Insp..'],
   },
   {
     title: 'Security',
@@ -91,14 +92,22 @@ const Solutions = () => {
       />
 
       <Box sx={{ bgcolor: 'white' }}>
+
+        <div>
+          <CustomersSection />
+        </div>
+
         {/* SOLUTIONS SECTION */}
-        <Box sx={{ py: 8, px: { xs: 2, sm: 4, md: 6 }, color: 'black' }}>
+        <Box sx={{ py: 5, px: { xs: 2, sm: 4, md: 6 }, color: 'black' }}>
           <Container maxWidth="xl">
             <Typography
               variant="h4"
               fontWeight="bold"
               mb={8}
-              sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' } }}
+               sx={{
+                fontSize: { xs: '1.75rem', md: '2.25rem' },
+                textAlign: { xs: 'center', md: 'left' },
+              }}
             >
               Revolutionize Digitally with Industry Solutions
             </Typography>
@@ -154,7 +163,8 @@ const Solutions = () => {
                               }}
                             />
                           </motion.div>
-
+                          
+                          {/* --------------------Text Box------------------------- */}
                           <Box sx={{ flex: 1 }}>
                             <Typography variant="h6" fontWeight="bold" gutterBottom>
                               {solution.title}
@@ -183,20 +193,25 @@ const Solutions = () => {
           </Container>
         </Box>
 
-        {/* CORPORATE TRAINING SECTION */}
-        <Box sx={{ bgcolor: '#f9f9f9', py: 8, color: 'black' }}>
+        {/* Product  SECTION */}
+        <Box 
+          sx={{ 
+            bgcolor: '#fafcfc', py: 8, color: 'black' ,
+            textAlign: { xs: 'center', md: 'left' },
+          }}
+        >
           <Container sx={{ px: { xs: 2, sm: 3, md: 4 } }}>
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }}>
               <Typography variant="h4" gutterBottom sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' } }}>
-                Corporate Training
+                Our Products
               </Typography>
               <Typography mb={2}>
-                Hands-on Drives and expert-led training programs tailored to your needs.
+                Know more about our products service........
               </Typography>
               <Box>
-                <Link href="/corporatetraining">
+                <Link href="/products">
                   <Button variant="outlined" color="primary">
-                    Explore All Training
+                    Explore All Products
                   </Button>
                 </Link>
               </Box>
@@ -206,14 +221,10 @@ const Solutions = () => {
           <Container sx={{ py: 5 }}>
             <Grid container spacing={{ xs: 3, md: 2 }} justifyContent="center">
               {[
-                { title: 'PLC Networking', icon: <Hub fontSize="large" className="text-red-400" /> },
-                { title: 'PLC Training', icon: <ModelTraining fontSize="large" className="text-red-400" /> },
-                { title: 'SCADA & HMI', icon: <AutoAwesome fontSize="large" className="text-red-400" /> },
-                { title: 'Servo Motor', icon: <Business fontSize="large" className="text-red-400" /> },
-                { title: 'Process Instrumentation', icon: <WorkspacePremium fontSize="large" className="text-red-400" /> },
-                { title: 'Industrial Automation', icon: <FactCheck fontSize="large" className="text-red-400" /> },
-                { title: 'Drives & Motors', icon: <Handyman fontSize="large" className="text-red-400" /> },
-              ].map(({ title, icon }) => (
+                { title: 'Siemens', icon: <Hub fontSize="large" className="text-red-400" />,link: '/products/siemens' },
+                { title: 'Delta', icon: <ModelTraining fontSize="large" className="text-red-400" />,link: '/products/delta' },
+                { title: 'Control Panel', icon: <AutoAwesome fontSize="large" className="text-red-400" />,link: '/products/control_panel' },
+              ].map(({ title, icon ,link}) => (
                 <Grid item xs={12} sm={10} md={4} key={title} component={'div' as any}>
                   <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
                     <Card sx={{ textAlign: 'center', py: 3, px: 2 }}>
@@ -223,8 +234,14 @@ const Solutions = () => {
                           {title}
                         </Typography>
                         <Typography variant="body2">
-                          Brief about {title.toLowerCase()} training.
+                          Brief about {title.toLowerCase()} Products.
                         </Typography>
+                        <Link href={link}>
+                          <button className="btn btn-sm bg-green-300 text-black mt-4">
+                            Read More
+                            <ArrowForward className="text-black-50 mt-1 cursor-pointer" />
+                          </button>
+                        </Link>
                       </CardContent>
                     </Card>
                   </motion.div>
@@ -254,7 +271,7 @@ const Solutions = () => {
         </Container>
 
         {/* INDUSTRIES SECTION */}
-        <Box sx={{ bgcolor: '#f5f5f5', py: 8, color: 'black' }}>
+        <Box sx={{ bgcolor: '#fafcfc', py: 8, color: 'black',textAlign: { xs: 'center', md: 'left' }, }}>
           <Container>
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }}>
               <Typography variant="h4" gutterBottom sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' }, mb: 5 }}>

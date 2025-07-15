@@ -7,13 +7,13 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model user_info {
+model user_details {
   id          Int      @id @default(autoincrement())
   first_name  String
   last_name   String
   email_id    String
   phone_no    String
-  course_name String
+  product_name String
   message     String
   createdAt   DateTime @default(now())
 }

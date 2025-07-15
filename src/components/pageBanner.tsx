@@ -73,7 +73,7 @@ export default function PageBanner({ title, imageUrl, description }: PageBannerP
           {!isContactPage && (
             <Link href="/contact" passHref>
               <Button variant="contained" color="error" size="large">
-                Get's More info
+                Let's Get Started
               </Button>
             </Link>
           )}

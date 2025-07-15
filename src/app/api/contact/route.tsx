@@ -10,7 +10,7 @@ export async function POST(req: NextRequest) {
 
     console.log('Received body:', body);
 
-    const saved = await prisma.user_info.create({
+    const saved = await prisma.user_details.create({
       data: body,
     });
 
