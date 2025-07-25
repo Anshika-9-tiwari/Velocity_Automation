@@ -29,7 +29,7 @@ const IndustryFeatureSection = ({ title, image, desc, extra, index }: FeaturePro
           alt={title}
           width={600}
           height={400}
-          className="rounded-lg shadow-md object-cover w-full h-95"
+          className="rounded-3xl shadow-md object-cover w-full h-95"
         />
       </motion.div>
       <motion.div
@@ -40,7 +40,7 @@ const IndustryFeatureSection = ({ title, image, desc, extra, index }: FeaturePro
       >
         <h2 className="text-2xl font-bold">{title}</h2>
         <p>{desc}</p>
-        {extra && <p>{extra}</p>}
+        {extra && <p className=' italic text-red-400'>{extra}</p>}
       </motion.div>
     </div>
   );

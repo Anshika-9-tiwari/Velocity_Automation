@@ -84,12 +84,12 @@ export default function Footer() {
           </Typography>
           <Typography variant="body2" sx={{ lineHeight: 2, maxWidth:350}}>
             <LocationOnIcon fontSize="small" sx={{ mr: 1}} />
-              Office No 10, Gnd Floor, Plot No. 25-26 , 15/16 Mathura Road Faridabad, Haryana- 121003 (India)
+             Plot No. 2334 HBH Colony, Sector 28, Mathura Road Faridabad, Sector 28 Police Station, Haryana- 121003
           </Typography>
            <Button
               variant="outlined"
               color="primary"
-              href="https://www.google.com/maps/search/?api=1&query=Plot+No.+23%2F25+Mathura+Road%2C+Faridabad%2C+Sector+28+Metro%2C+near+Adani+Gas%2C+121008"
+              href="https://www.google.com/maps?q=Plot+No.+2334+HBH+Colony,+Sector+28,+Mathura+Road+Faridabad,+Sector+28+Police+Station,+Haryana-121003"
               target="_blank"
               rel="noopener"
             >
@@ -105,7 +105,7 @@ export default function Footer() {
           <Box display="flex" justifyContent={isMobile ? 'center' : 'flex-start'} gap={2}>
             <IconButton
               component="a"
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/company/77901134/admin/dashboard/"
               target="_blank"
               aria-label="LinkedIn"
               sx={{

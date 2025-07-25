@@ -1,14 +1,3 @@
-// 'use client';
-// import PageBanner from '@/components/pageBanner'
-// import { Box, Container, Typography } from '@mui/material';
-
-// export default function SecuritySolution() {
-//   return (
-//     <>
-
-//      </>
-//   );
-// }
 'use client';
 
 import React from 'react';

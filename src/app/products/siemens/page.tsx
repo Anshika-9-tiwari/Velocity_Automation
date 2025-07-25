@@ -14,7 +14,7 @@ const Siemens = () => {
   },
   {
     title: 'Siemens HMI',
-    description: 'We Deliver all HMI Products Like- Basic Panels 1st Gen, Basic Panels 2nd Gen, Comfort Panels 1st Gen - Standard devices',
+    description: 'We Deliver all HMI Products Like- Basic Panels 1st Gen, 2nd Gen, Comfort Panels 1st Gen - Standard devices',
     image: 'https://atechnology.in/wp-content/uploads/2023/04/CPMFORT-PANEL-PHOTO-removebg-preview.jpg',
   },
   {
@@ -49,7 +49,7 @@ const Siemens = () => {
       <PageBanner
         title="Siemens Products"
         description='PLC, HMI, CONTROL UNIT, DRIVES & MOTORS etc '
-        imageUrl="https://i.pinimg.com/736x/56/d8/a1/56d8a14df98686062ee2367a10514052.jpg" 
+        imageUrl="https://atechnology.in/wp-content/uploads/2023/04/CPMFORT-PANEL-PHOTO-removebg-preview.jpg" 
       />
 
      {/* CourseCardSection */}
@@ -60,7 +60,7 @@ const Siemens = () => {
             <motion.div whileHover={{ scale: 1.03 }}>
               <div
                 key={index}
-                className="bg-base-50 shadow-xl rounded-xl overflow-hidden hover:shadow-2xl transition duration-300 border"
+                className="bg-base-50 shadow-xl rounded-xl overflow-hidden hover:shadow-2xl transition duration-300 border-gray-200 border-2"
               >
                 <figure>
                   <img src={training.image} alt={training.title} className="w-full h-55 object-cover" />

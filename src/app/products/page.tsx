@@ -23,7 +23,7 @@ const products = [
   {
     title: 'Delta',
     description: 'We deliver all Delta products like plc, hmi, drives & motors etc',
-    image: 'https://atechnology.in/wp-content/uploads/2023/04/Siemens.jpg',
+    image: '/deltaproducts.png',
     link: '/products/delta',
   },
 ];
@@ -34,7 +34,7 @@ export default function Products() {
       <PageBanner
         title="All Products"
         description="Siemens , Delta & HMI & Control Panel"
-        imageUrl="https://i.pinimg.com/736x/2c/44/81/2c4481633cbbd9f084aed8a50a5dc8fd.jpg"
+        imageUrl="https://atechnology.in/wp-content/uploads/2023/04/plc-1.jpg"
       />
 
       {/* CourseCardSection */}
@@ -46,7 +46,7 @@ export default function Products() {
             <motion.div whileHover={{ scale: 1.03 }}>
               <div
                 key={index}
-                className="bg-base-50 shadow-xl rounded-xl overflow-hidden hover:shadow-2xl transition duration-400"
+                className="bg-base-50 shadow-xl rounded-xl overflow-hidden hover:shadow-2xl transition duration-400 border-red-200 border-1"
               >
                 <figure>
                   <img src={training.image} alt={training.title} className="w-full h-55 object-cover" />

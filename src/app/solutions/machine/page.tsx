@@ -27,7 +27,7 @@ const Industries = () => {
   ];
 
   return (
-    <div className="bg-white text-gray-800">
+    <div className="bg-white text-gray-800 overflow-x-hidden">
         <PageBanner
           title="Machine Monitoring"
           description='Maximizing Output, Minimizing Downtime'
@@ -101,10 +101,9 @@ const Industries = () => {
         >
           <ContactComponent />
         </motion.div>
-
-        <div>
-          <CustomersSection />
-        </div>
+      </div>
+      <div>
+        <CustomersSection />
       </div>
     </div>
   );

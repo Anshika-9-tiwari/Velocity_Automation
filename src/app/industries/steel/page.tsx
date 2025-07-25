@@ -4,52 +4,47 @@ import ContactComponent from '@/app/contact/contactcomponent';
 import PageBanner from '@/components/pageBanner';
 import IndustryFeatureSection from '@/components/industryfeature';
 import { motion } from 'framer-motion';
+import Videofile from '../steel/videofile';
 
 const featureData = [
   {
-    title: 'Worker health and safety',
-    image: 'https://third-eye.ai/wp-content/uploads/2023/09/food.jpg',
-    desc: `Contamination and quality inspection of food are critical aspects of ensuring food safety and consumer health. Proper inspection helps identify and prevent potential hazards that could arise from contamination, spoilage, or other quality issues.`,
-    extra: `Also, Vision-based system to monitor the usage of personal protective equipment (PPE) in a food and beverages factory for worker’s safety and health....`,
+    title: 'Steel Industry Overview',
+    image: '/industry.jpg',
+    desc: `The steel industry is one of the most essential and foundational sectors of the global economy. It involves the production, processing, and distribution of steel, which is an alloy primarily composed of iron and carbon. Steel is known for its strength, durability, and versatility, making it a critical material in various sectors including construction, automotive, infrastructure, machinery, shipbuilding, appliances, and more.`,
+    extra: `As a backbone of industrial development, it plays a major role in economic growth and job creation. Modern steel production also focuses on sustainability, with high levels of recycling and energy efficiency.`,
   },
   {
-    title: 'AI-Based Quality Inspection',
-    image: '/icecream-food.jpg',
-    desc: `AI-driven vision systems automate food quality inspection by detecting contamination, deformation, or mislabeling with high accuracy.`,
-    extra: `It reduces human error, ensures consistent quality, and enhances consumer trust with real-time defect detection on production lines.`,
+    title: 'Smart Quality Inspection',
+    image: '/steelSize.jpg',
+    desc: `Smart quality inspection in the steel industry is a critical process that involves the use of advanced technologies and automation to ensure the quality and integrity of steel products. Steel is a fundamental material used in various industries, including construction, automotive, aerospace, and manufacturing. Maintaining high-quality standards is essential to ensure the safety and reliability of steel products.`,
+    extra: `Steel is essential in manufacturing gears, shafts, actuators, tools, and sensors that are key parts of automated systems.`,
   },
   {
-    title: 'Packaging Line Automation',
-    image: '/object-segmentation.jpeg',
-    desc: `Automated packaging systems streamline bottling, sealing, and labeling operations in high-speed food production environments.`,
-    extra: `Our smart automation boosts throughput, improves hygiene, and reduces operational costs in bakery, snack, and beverage lines.`,
+    title: 'Importance in the Automation Industry',
+    image: '/steelplant.jpg',
+    desc: `The steel industry plays a critical role in supporting the automation industry, as it provides the structural and mechanical backbone for many automated systems and components. Here's how:`,
+    extra: `Steel is used to build the frames of robots, conveyor systems, CNC machines, and industrial arms due to its strength and durability . Automated factories require high-strength, wear-resistant, and heat-resistant steel to ensure safe and long-lasting performance.`,
   },
-  {
-    title: 'Sorting and Counting',
-    image: '/bottle-sort.jpg',
-    desc: `Automated sorting and counting in food manufacturing is a crucial process to ensure product quality, safety, and efficiency. `,
-    extra: `It involves the use of various technologies and systems to sort and count food items accurately like Weight-based Sorting, Colour and Size Sorting, OCR, Barcode Scanning etc.`,
-  },
+  
 ];
 
-const FoodAndBeverages = () => {
+const Steel = () => {
   return (
-    <div className="bg-white text-gray-800">
+    <div className="bg-white text-gray-800 overflow-x-hidden">
       <PageBanner
-        title="Food and Beverages Industry"
-        description='Transforming manufacturing with Food and Beverages Industry 4.0 integration'
-        imageUrl="https://i.pinimg.com/736x/7e/75/59/7e75595fa40e1abb5e6bb0b7f0f638b1.jpg" 
+        title="Steel Industry"
+        description='Transforming manufacturing with Steel Industry 4.0 integration'
+        imageUrl="/steelplant.jpg" 
       />
 
       <div className="px-6 md:px-16 py-12">
         <div className="mb-12">
           <h1 className="text-3xl font-bold mb-4">Overview</h1>
           <p className="mb-4">
-            The Food & Beverages industry demands strict safety, hygiene, and real-time tracking across the supply chain. From processing to packaging,
-            smart technologies are transforming how food is produced, stored, and delivered.
+            The steel industry, known for its strength and durability, is embracing a new era of transformation fueled by artificial intelligence (AI) solutions. In an age where digital innovation permeates every sector, AI is revolutionizing the way steel is produced, processed, and utilized. From streamlining production processes to optimizing supply chains, AI is breathing new life into the traditional steel industry.
           </p>
-          <p>
-           <i> Our smart factory and AI-driven solutions help food companies increase efficiency, reduce waste, and meet global safety regulations with ease.</i>
+          <p className=' italic'>
+           AI solutions in the steel industry encompass a wide range of technologies, including machine learning, data analytics, robotics, and IoT (Internet of Things). These cutting-edge tools empower manufacturers and stakeholders with actionable insights, predictive capabilities, and improved operational efficiency. By harnessing the power of AI, the steel industry is unlocking untapped potential, driving unprecedented productivity, and staying ahead in an ever-evolving market.
           </p>
         </div>
 
@@ -57,6 +52,11 @@ const FoodAndBeverages = () => {
         {featureData.map((item, i) => (
           <IndustryFeatureSection key={i} index={i} {...item} />
         ))}
+
+       {/* VideoSection */}
+        <div>
+          <Videofile/>
+        </div>
 
        {/* Contact CTA */}
         <motion.div
@@ -72,4 +72,4 @@ const FoodAndBeverages = () => {
   );
 };
 
-export default FoodAndBeverages;
+export default Steel;

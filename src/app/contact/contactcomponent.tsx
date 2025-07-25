@@ -17,11 +17,10 @@ const ContactImp = () => {
         <div className="flex-1 text-center md:text-left ">
           <h2 className="text-3xl font-semibold mb-3 text-center">Contact Us</h2>
           <p className="mb-3 text-base text-center">
-            Hey! Are you facing the same industry challenges in your Career growth? We can help you digitize and transform your
-            challenges and problems into potential digital solutions.
+            Hey! Are you facing the same industry challenges in your organisation? We can help you digitize and transform your challenges and problems into potential digital solutions.
           </p>
           <h6 className="font-semibold text-sm md:text-base text-center">
-            Talk to our experts to know more about our Courses and Services.
+            Talk to our experts to know more about our products and solutions.
           </h6>
         </div>
 

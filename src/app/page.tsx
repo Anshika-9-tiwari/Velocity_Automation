@@ -21,19 +21,16 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import { motion } from 'framer-motion';
 import PageBanner from '@/components/pageBanner';
 import {
-  FactCheck,
-  Business,
-  ModelTraining,
   Hub,
   AutoAwesome,
-  Handyman,
-  WorkspacePremium,
   MedicalInformation,
   Engineering,
   Fastfood,
   ElectricBolt,
   ArrowForward,
 } from '@mui/icons-material';
+import Inventory2Icon from '@mui/icons-material/Inventory2';
+import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits';
 import ContactComponent from '../app/contact/contactcomponent';
 import CustomersSection from '@/components/ourcustomers';
 
@@ -50,7 +47,7 @@ const solutionsData = [
   },
   {
     title: 'Machine',
-    image: '/condition-based.webp',
+    image: '/controlPanel.jpg',
     items: [
       'Machine Utilization & Productivity',
       'Condition Based Monitoring',
@@ -65,7 +62,7 @@ const solutionsData = [
   {
     title: 'Quality',
     image: 'https://i.pinimg.com/736x/45/51/9f/45519fedf9dad47bbbd8f79ec518103a.jpg',
-    items: ['Computer Vision based Quality Insp..'],
+    items: ['Computer Vision based Quality.'],
   },
   {
     title: 'Security',
@@ -74,7 +71,7 @@ const solutionsData = [
   },
   {
     title: 'Material',
-    image: 'https://i.pinimg.com/736x/b9/f6/54/b9f654329c2d53ee7e34dc55ab267ea3.jpg',
+    image: '/Warehousepic.jpeg',
     items: ['Traceability', 'Warehouse Management', 'Scrap & Bin Management'],
   },
 ];
@@ -92,7 +89,7 @@ const Solutions = () => {
       />
 
       <Box sx={{ bgcolor: 'white' }}>
-
+        {/* customer */}
         <div>
           <CustomersSection />
         </div>
@@ -104,7 +101,7 @@ const Solutions = () => {
               variant="h4"
               fontWeight="bold"
               mb={8}
-               sx={{
+              sx={{
                 fontSize: { xs: '1.75rem', md: '2.25rem' },
                 textAlign: { xs: 'center', md: 'left' },
               }}
@@ -122,7 +119,7 @@ const Solutions = () => {
                   container
                   spacing={4}
                   alignItems="center"
-                  justifyContent="space-between"
+                  justifyContent={{ xs: 'center', md: 'space-between' }}
                   key={groupIndex}
                   sx={{ mb: { xs: 6, md: 8 } }}
                 >
@@ -138,6 +135,8 @@ const Solutions = () => {
                             display: 'flex',
                             flexDirection: isTablet ? 'column' : flip ? 'row' : 'row-reverse',
                             gap: 3,
+                            justifyContent: 'center',
+                            textAlign: { xs: 'center', md: 'left' },
                             alignItems: 'center',
                           }}
                         >
@@ -163,21 +162,30 @@ const Solutions = () => {
                               }}
                             />
                           </motion.div>
-                          
-                          {/* --------------------Text Box------------------------- */}
+
                           <Box sx={{ flex: 1 }}>
                             <Typography variant="h6" fontWeight="bold" gutterBottom>
                               {solution.title}
                             </Typography>
                             <List dense sx={{ mt: -1 }}>
                               {solution.items.map((text) => (
-                                <ListItem key={text} sx={{ py: { xs: 1, md: 0.4 } }}>
+                                <ListItem
+                                  key={text}
+                                  sx={{
+                                    py: { xs: 1, md: 0.4 },
+                                    justifyContent: { xs: 'center', md: 'flex-start' },
+                                  }}
+                                >
                                   <ListItemIcon sx={{ minWidth: 28 }}>
                                     <CheckCircleIcon fontSize="small" className="text-red-400" />
                                   </ListItemIcon>
                                   <ListItemText
                                     primary={text}
-                                    primaryTypographyProps={{ fontSize: 15, lineHeight: '1' }}
+                                    primaryTypographyProps={{
+                                      fontSize: 15,
+                                      lineHeight: {xs:0, md:1},
+                                     
+                                    }}
                                   />
                                 </ListItem>
                               ))}
@@ -193,10 +201,12 @@ const Solutions = () => {
           </Container>
         </Box>
 
-        {/* Product  SECTION */}
-        <Box 
-          sx={{ 
-            bgcolor: '#fafcfc', py: 8, color: 'black' ,
+        {/* PRODUCTS SECTION */}
+        <Box
+          sx={{
+            bgcolor: '#fafcfc',
+            py: 8,
+            color: 'black',
             textAlign: { xs: 'center', md: 'left' },
           }}
         >
@@ -205,9 +215,7 @@ const Solutions = () => {
               <Typography variant="h4" gutterBottom sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' } }}>
                 Our Products
               </Typography>
-              <Typography mb={2}>
-                Know more about our products service........
-              </Typography>
+              <Typography mb={2}>Know more about our products service...</Typography>
               <Box>
                 <Link href="/products">
                   <Button variant="outlined" color="primary">
@@ -221,21 +229,31 @@ const Solutions = () => {
           <Container sx={{ py: 5 }}>
             <Grid container spacing={{ xs: 3, md: 2 }} justifyContent="center">
               {[
-                { title: 'Siemens', icon: <Hub fontSize="large" className="text-red-400" />,link: '/products/siemens' },
-                { title: 'Delta', icon: <ModelTraining fontSize="large" className="text-red-400" />,link: '/products/delta' },
-                { title: 'Control Panel', icon: <AutoAwesome fontSize="large" className="text-red-400" />,link: '/products/control_panel' },
-              ].map(({ title, icon ,link}) => (
+                {
+                  title: 'Siemens product',
+                  icon: <Inventory2Icon fontSize="large" className="text-red-400" />,
+                  link: '/products/siemens',
+                },
+                {
+                  title: 'Delta product',
+                  icon: <ProductionQuantityLimitsIcon fontSize="large" className="text-red-400" />,
+                  link: '/products/delta',
+                },
+                {
+                  title: 'Control Panel',
+                  icon: <AutoAwesome fontSize="large" className="text-red-400" />,
+                  link: '/products/control_panel',
+                },
+              ].map(({ title, icon, link }) => (
                 <Grid item xs={12} sm={10} md={4} key={title} component={'div' as any}>
                   <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
-                    <Card sx={{ textAlign: 'center', py: 3, px: 2 }}>
+                    <Card sx={{ textAlign: 'center', py: 3, px: 2, borderRadius: '16px' }}>
                       {icon}
                       <CardContent>
                         <Typography variant="h6" fontWeight="bold">
                           {title}
                         </Typography>
-                        <Typography variant="body2">
-                          Brief about {title.toLowerCase()} Products.
-                        </Typography>
+                        <Typography variant="body2">Brief about {title.toLowerCase()} Products.</Typography>
                         <Link href={link}>
                           <button className="btn btn-sm bg-green-300 text-black mt-4">
                             Read More
@@ -251,10 +269,14 @@ const Solutions = () => {
           </Container>
         </Box>
 
-        {/* SMART FACTORY SECTION */}
+        {/* SMART FACTORY */}
         <Container sx={{ py: 8, color: 'black' }}>
           <motion.div initial={{ x: -100, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 1 }}>
-            <Typography variant="h4" gutterBottom sx={{ textAlign: 'center', fontSize: { xs: '1.75rem', md: '2.25rem' } }}>
+            <Typography
+              variant="h4"
+              gutterBottom
+              sx={{ textAlign: 'center', fontSize: { xs: '1.75rem', md: '2.25rem' } }}
+            >
               Smart Factory
             </Typography>
             <Typography mb={2} sx={{ textAlign: 'center', color: 'gray' }}>
@@ -270,19 +292,47 @@ const Solutions = () => {
           </motion.div>
         </Container>
 
-        {/* INDUSTRIES SECTION */}
-        <Box sx={{ bgcolor: '#fafcfc', py: 8, color: 'black',textAlign: { xs: 'center', md: 'left' }, }}>
+        {/* INDUSTRIES */}
+        <Box
+          sx={{
+            bgcolor: '#fafcfc',
+            py: 8,
+            color: 'black',
+            textAlign: { xs: 'center', md: 'left' },
+          }}
+        >
           <Container>
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }}>
               <Typography variant="h4" gutterBottom sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' }, mb: 5 }}>
                 Industries We Serve
               </Typography>
-              <Grid container spacing={{ xs: 3, md: 5 }} justifyContent="center">
+              <Grid container spacing={{ xs: 3, md: 3 }} justifyContent="center">
                 {[
-                  { name: 'Warehouse & Logistics', icon: <Fastfood className="text-red-500" />, link: '/industries/warehouse-and-logistics' },
-                  { name: 'Manufacturing Industry', icon: <MedicalInformation className="text-red-500" />, link: '/industries/manufacturing' },
-                  { name: 'Food & Beverages', icon: <ElectricBolt className="text-red-500" />, link: '/industries/food-and-beverages' },
-                  { name: 'Automotive Industry', icon: <Engineering className="text-red-500" />, link: '/industries/automotive' },
+                  {
+                    name: 'Warehouse & Logistics',
+                    icon: <Fastfood className="text-red-500" />,
+                    link: '/industries/warehouse-and-logistics',
+                  },
+                  {
+                    name: 'Manufacturing Industry',
+                    icon: <MedicalInformation className="text-red-500" />,
+                    link: '/industries/manufacturing',
+                  },
+                  {
+                    name: 'Automotive Industry',
+                    icon: <Engineering className="text-red-500" />,
+                    link: '/industries/automotive',
+                  },
+                  {
+                    name: 'Food & Beverages',
+                    icon: <ElectricBolt className="text-red-500" />,
+                    link: '/industries/food-and-beverages',
+                  },
+                  {
+                    name: 'Steel Industry',
+                    icon: <Engineering className="text-red-500" />,
+                    link: '/industries/steel',
+                  },
                 ].map(({ name, icon, link }) => (
                   <Grid item xs={6} sm={6} md={3} key={name} component={'div' as any}>
                     <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
@@ -307,11 +357,11 @@ const Solutions = () => {
         </Box>
 
         {/* CONTACT CTA */}
-        <motion.div 
-        initial={{ opacity: 0, y: 50 }} 
-        whileInView={{ opacity: 1, y: 0 }} 
-        viewport={{ once: true }} 
-        transition={{ duration: 0.6 }}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
           <ContactComponent />
         </motion.div>

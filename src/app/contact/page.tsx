@@ -30,16 +30,16 @@ import {
   Message as MessageIcon,
   Person as PersonIcon,
   Phone as PhoneIcon,
-  School as SchoolIcon,
+  Business as BusinessIcon,
 } from '@mui/icons-material';
 import CustomersSection from '@/components/ourcustomers';
 
 export default function ContactPage() {
   const [form, setForm] = useState({
-    first_name: '',
-    last_name: '',
+    full_name: '',
     email_id: '',
     phone_no: '',
+    your_company: '',
     product_name: '',
     message: '',
   });
@@ -70,10 +70,10 @@ export default function ContactPage() {
       if (res.ok) {
         setSnack(true);
         setForm({
-          first_name: '',
-          last_name: '',
+          full_name: '',
           email_id: '',
           phone_no: '',
+          your_company: '',
           product_name: '',
           message: '',
         });
@@ -87,6 +87,7 @@ export default function ContactPage() {
 
   return (
     <>
+     <div className="bg-white text-gray-800">
       <PageBanner
         title="Contact Us"
         imageUrl="Contactbanner.jpeg"
@@ -94,7 +95,7 @@ export default function ContactPage() {
       />
 
       {/* our customers */}
-      <div>
+      <div className='bg-white'>
         <CustomersSection />
       </div>
 
@@ -118,7 +119,7 @@ export default function ContactPage() {
                   </Typography>
                 </Box>
                 <Typography sx={{ mb: 2, pl: 4, borderBottom: 1 }}>
-                  Office No 10, Gnd Floor, Plot No. 25-26 , 15/16 Mathura Road Faridabad, Haryana- 121003 (India)
+                  Plot No. 2334 HBH Colony, Sector 28, Mathura Road Faridabad, Sector 28 Police Station, Haryana- 121003
                 </Typography>
 
                 <Box display="flex" alignItems="center" mb={2}>
@@ -154,7 +155,7 @@ export default function ContactPage() {
             <Card sx={{ overflow: 'hidden', borderRadius: 3, boxShadow: 3 }}>
               <iframe
                 title="Google Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14013.118672879325!2d77.29410449499944!3d28.48326890000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d18b7e92e0f95%3A0x911b26a3d60e7a85!2s23%2C%20Mathura%20Rd%2C%20Sector%2028%2C%20Faridabad%2C%20Haryana%20121003!5e0!3m2!1sen!2sin!4v1720942831473!5m2!1sen!2sin"
+                src="https://www.google.com/maps?q=Plot+No.+2334+HBH+Colony,+Sector+28,+Mathura+Road+Faridabad,+Sector+28+Police+Station,+Haryana-121003&output=embed"
                 width="100%"
                 height="250"
                 style={{ border: 0 }}
@@ -171,25 +172,10 @@ export default function ContactPage() {
             <Box component="form" noValidate onSubmit={handleSubmit}>
               <Stack spacing={2}>
                 <TextField
-                  label="First Name"
-                  name="first_name"
+                  label="Full Name"
+                  name="full_name"
                   fullWidth
-                  value={form.first_name}
-                  onChange={handleChange}
-                  required
-                  InputProps={{
-                    startAdornment: (
-                      <InputAdornment position="start">
-                        <PersonIcon />
-                      </InputAdornment>
-                    ),
-                  }}
-                />
-                <TextField
-                  label="Last Name"
-                  name="last_name"
-                  fullWidth
-                  value={form.last_name}
+                  value={form.full_name}
                   onChange={handleChange}
                   required
                   InputProps={{
@@ -231,6 +217,21 @@ export default function ContactPage() {
                     ),
                   }}
                 />
+                <TextField
+                  label="Your Company"
+                  name="your_company"
+                  fullWidth
+                  value={form.your_company}
+                  onChange={handleChange}
+                  required
+                  InputProps={{
+                    startAdornment: (
+                      <InputAdornment position="start">
+                        <BusinessIcon />
+                      </InputAdornment>
+                    ),
+                  }}
+                />
                 <FormControl fullWidth required>
                   <InputLabel>Products</InputLabel>
                   <Select
@@ -239,13 +240,9 @@ export default function ContactPage() {
                     onChange={handleChange}
                     label="Products"
                   >
-                    <MenuItem value="Automation">Siemens PLC</MenuItem>
-                    <MenuItem value="Industrial Automation">Siemens HMI</MenuItem>
-                    <MenuItem value="PLC Networking">Siemens AC Drive</MenuItem>
-                    <MenuItem value="PLC Programing">SiemensServo System</MenuItem>
-                    <MenuItem value="SCADA & HMI">Siemens Simatic IPC</MenuItem>
-                    <MenuItem value="Servo Motor">Siemens Simatic SCADA</MenuItem>
-                    <MenuItem value="Process Instrumentation">Simatic IOT2000</MenuItem>
+                    <MenuItem value="Automation">Siemens Products</MenuItem>
+                    <MenuItem value="Industrial Automation">Delta Products</MenuItem>
+                    <MenuItem value="PLC Networking">Control Panel</MenuItem>
                   </Select>
                 </FormControl>
                 <TextField
@@ -273,7 +270,7 @@ export default function ContactPage() {
                   fullWidth
                   sx={{ py: 1.5, fontWeight: 'bold', fontSize: '1rem', borderRadius: 2 }}
                 >
-                  {loading ? <CircularProgress size={24} color="inherit" /> : 'Send Message'}
+                  {loading ? <CircularProgress size={24} color="inherit" /> : 'Submit'}
                 </Button>
               </Stack>
             </Box>
@@ -281,9 +278,10 @@ export default function ContactPage() {
         </Stack>
 
         <Snackbar open={snack} autoHideDuration={3000} onClose={() => setSnack(false)}>
-          <Alert severity="success">Message sent successfully!</Alert>
+          <Alert severity="success">Data sent successfully!</Alert>
         </Snackbar>
       </Container>
+      </div>
     </>
   );
-}
+} 

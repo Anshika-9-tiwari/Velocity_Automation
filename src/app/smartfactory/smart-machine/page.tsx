@@ -69,7 +69,7 @@ const SmartMachine = () => {
   ];
 
   return (
-    <div className="bg-white text-gray-800">
+    <div className="bg-white text-gray-800 overflow-x-hidden">
       <PageBanner
         title="Smart Machine"
         description="Transforming manufacturing with smart machine 4.0 integration"

@@ -70,7 +70,7 @@ const SmartVision = () => {
   ];
 
   return (
-    <div className="bg-white text-gray-900">
+    <div className="bg-white text-gray-900 overflow-x-hidden">
       {/* Banner */}
        <PageBanner
         title="Smart Vision"

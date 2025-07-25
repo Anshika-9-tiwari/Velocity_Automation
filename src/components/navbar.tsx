@@ -45,7 +45,6 @@ const Navbar = () => {
         { label: 'Siemens', link: '/products/siemens' },
         { label: 'Delta', link: '/products/delta' },
         { label: 'Control Panel', link: '/products/control_panel' },
-        { label: 'Services', link: '/products/services' },
       ]
     },
     {
@@ -64,6 +63,7 @@ const Navbar = () => {
         { label: 'Manufacturing', link: '/industries/manufacturing' },
         { label: 'Food & Beverages', link: '/industries/food-and-beverages' },
         { label: 'Warehouse & Logistics', link: '/industries/warehouse-and-logistics' },
+        { label: 'Steel', link: '/industries/steel' },
       ]
     },
     { label: 'Contact', link: '/contact' }

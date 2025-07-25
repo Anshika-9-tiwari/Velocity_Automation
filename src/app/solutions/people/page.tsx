@@ -11,11 +11,11 @@ export default function PeopleSolution() {
       <PageBanner
         title="People"
         description="Innovating Solutions for people"
-        imageUrl="https://i.pinimg.com/736x/d3/14/fe/d314fec5a986beec80b279f30e193e53.jpg"
+        imageUrl="/Group_Engineer.jpg"
       />
 
       {/* Intro */}
-      <Box sx={{ py: 8 , bgcolor:'white', color:'black'}}>
+      <Box sx={{ py: 6 , bgcolor:'white', color:'black'}}>
         <Container>
           <Typography variant="h4" fontWeight="bold" gutterBottom>
             People Solution
@@ -42,10 +42,10 @@ export default function PeopleSolution() {
         </Container>
       </Box>
 
-      <div className="space-y-16 px-4 md:px-10 py-12 bg-white">
+      <div className="space-y-16 px-4 md:px-10 py-8 bg-white">
         {/* Section 1 */}
         <motion.div
-          className="flex flex-col lg:flex-row items-center gap-10"
+          className="flex flex-col lg:flex-row items-center gap-10 bg-gray-50 full"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
