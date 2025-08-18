@@ -20,7 +20,7 @@ export default function HeaderTop() {
 
         {/* right Links */}
         <div className="hidden md:flex items-center gap-4 mt-2 md:mt-0 transition duration-300 animate-pulse">
-          <Link href="https://www.linkedin.com/company/77901134/admin/dashboard/" className="hover:text-green-400">
+          <Link href="https://www.linkedin.com/company/velocity-automation/posts/?feedView=all" className="hover:text-green-400">
             <FaLinkedin size={18} />
           </Link>
           <Link href="https://wa.me/919818293887" className="hover:text-green-400">

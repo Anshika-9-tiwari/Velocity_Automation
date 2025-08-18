@@ -105,7 +105,7 @@ export default function Footer() {
           <Box display="flex" justifyContent={isMobile ? 'center' : 'flex-start'} gap={2}>
             <IconButton
               component="a"
-              href="https://www.linkedin.com/company/77901134/admin/dashboard/"
+              href="https://www.linkedin.com/company/velocity-automation/posts/?feedView=all"
               target="_blank"
               aria-label="LinkedIn"
               sx={{
