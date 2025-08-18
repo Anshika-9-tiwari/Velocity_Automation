@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://velocity-automation.vercel.app
+
+# Sitemaps
+Sitemap: https://velocity-automation.vercel.app/sitemap.xml

@@ -62,7 +62,7 @@ const solutionsData = [
   {
     title: 'Quality',
     image: 'https://i.pinimg.com/736x/45/51/9f/45519fedf9dad47bbbd8f79ec518103a.jpg',
-    items: ['Computer Vision based Quality.'],
+    items: ['Computer Vision based Quality', 'Quality Analytics'],
   },
   {
     title: 'Security',
@@ -95,7 +95,7 @@ const Solutions = () => {
         </div>
 
         {/* SOLUTIONS SECTION */}
-        <Box sx={{ py: 5, px: { xs: 2, sm: 4, md: 6 }, color: 'black' }}>
+        <Box sx={{ py: 8, px: { xs: 2, sm: 4, md: 4 }, color: 'black' }}>
           <Container maxWidth="xl">
             <Typography
               variant="h4"
@@ -205,9 +205,13 @@ const Solutions = () => {
         <Box
           sx={{
             bgcolor: '#fafcfc',
-            py: 8,
+            py: 6,
             color: 'black',
-            textAlign: { xs: 'center', md: 'left' },
+            textAlign: 'center',
+            boxShadow: 1,
+            mb: 2,
+            overflow: 'hidden',
+            position: 'relative',
           }}
         >
           <Container sx={{ px: { xs: 2, sm: 3, md: 4 } }}>
@@ -218,42 +222,58 @@ const Solutions = () => {
               <Typography mb={2}>Know more about our products service...</Typography>
               <Box>
                 <Link href="/products">
-                  <Button variant="outlined" color="primary">
+                  <Button variant="outlined" color="error"  sx={{ textTransform: 'none', mb: 3 }}>
                     Explore All Products
                   </Button>
                 </Link>
               </Box>
             </motion.div>
           </Container>
-
           <Container sx={{ py: 5 }}>
-            <Grid container spacing={{ xs: 3, md: 2 }} justifyContent="center">
+            <Grid container spacing={{ xs: 3, md: 4 }} justifyContent="center">
               {[
                 {
-                  title: 'Siemens product',
+                  title: 'Siemens',
                   icon: <Inventory2Icon fontSize="large" className="text-red-400" />,
+                  desc: "Reliable automation and control products.",
                   link: '/products/siemens',
                 },
                 {
-                  title: 'Delta product',
+                  title: 'Delta',
                   icon: <ProductionQuantityLimitsIcon fontSize="large" className="text-red-400" />,
+                  desc: "Advanced industrial automation solutions.",
                   link: '/products/delta',
                 },
                 {
                   title: 'Control Panel',
                   icon: <AutoAwesome fontSize="large" className="text-red-400" />,
+                  desc: "Customized control panels for industries.",
                   link: '/products/control_panel',
                 },
-              ].map(({ title, icon, link }) => (
+              ].map(({ title, icon, desc, link }) => (
                 <Grid item xs={12} sm={10} md={4} key={title} component={'div' as any}>
                   <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
-                    <Card sx={{ textAlign: 'center', py: 3, px: 2, borderRadius: '16px' }}>
-                      {icon}
+                    <Card sx={{ textAlign: 'center', py: 3, px: 3, borderRadius: '16px' }}>
+                      <Box
+                        sx={{
+                          width: 70,
+                          height: 70,
+                          borderRadius: '50%',
+                          bgcolor: '#fee2e2',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          margin: '0 auto',
+                          mb: 2,
+                        }}
+                      >
+                        {icon}
+                      </Box>
                       <CardContent>
                         <Typography variant="h6" fontWeight="bold">
                           {title}
                         </Typography>
-                        <Typography variant="body2">Brief about {title.toLowerCase()} Products.</Typography>
+                        <Typography variant="body2">{desc}</Typography>
                         <Link href={link}>
                           <button className="btn btn-sm bg-green-300 text-black mt-4">
                             Read More
@@ -298,12 +318,12 @@ const Solutions = () => {
             bgcolor: '#fafcfc',
             py: 8,
             color: 'black',
-            textAlign: { xs: 'center', md: 'left' },
+            textAlign: 'center'
           }}
         >
           <Container>
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }}>
-              <Typography variant="h4" gutterBottom sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' }, mb: 5 }}>
+              <Typography variant="h4" gutterBottom sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' }, mb:6 }}>
                 Industries We Serve
               </Typography>
               <Grid container spacing={{ xs: 3, md: 3 }} justifyContent="center">
@@ -311,35 +331,71 @@ const Solutions = () => {
                   {
                     name: 'Warehouse & Logistics',
                     icon: <Fastfood className="text-red-500" />,
+                    desc: "Streamlined automation for warehouses and logistics.",
                     link: '/industries/warehouse-and-logistics',
                   },
                   {
                     name: 'Manufacturing Industry',
                     icon: <MedicalInformation className="text-red-500" />,
+                    desc: "End-to-end smart solutions for manufacturing plants.",
                     link: '/industries/manufacturing',
                   },
                   {
                     name: 'Automotive Industry',
                     icon: <Engineering className="text-red-500" />,
+                    desc: "Advanced automation for automotive production lines.",
                     link: '/industries/automotive',
                   },
                   {
                     name: 'Food & Beverages',
                     icon: <ElectricBolt className="text-red-500" />,
+                    desc: "Safe and efficient automation for food & beverages.",
                     link: '/industries/food-and-beverages',
                   },
                   {
                     name: 'Steel Industry',
                     icon: <Engineering className="text-red-500" />,
+                    desc: "Optimized automation for steel manufacturing.",
                     link: '/industries/steel',
                   },
-                ].map(({ name, icon, link }) => (
+                ].map(({ name, icon, desc, link }) => (
                   <Grid item xs={6} sm={6} md={3} key={name} component={'div' as any}>
-                    <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
-                      <Card sx={{ textAlign: 'center', py: 3, px: 2 }}>
-                        {icon}
-                        <CardContent>
-                          <Typography>{name}</Typography>
+                    <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }} style={{ height: "100%" }}>
+                      <Card sx={{
+                          borderRadius: 3,
+                          boxShadow: 3,
+                          height: "100%",
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: 'center',
+                          justifyContent: 'flex-start',
+                          width: 350, 
+                          mx: "auto", 
+                          bgcolor: '#ffffff',
+                          py: 3,
+                       }}>
+                        <Box
+                          sx={{
+                            width: 70,
+                            height: 70,
+                            borderRadius: '50%',
+                            bgcolor: '#fee2e2',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            margin: '0 auto',
+                            mb: 2,
+                          }}
+                        >
+                          {icon}
+                        </Box>
+                        <CardContent sx={{ flexGrow: 1 }}>
+                          <Typography variant="h6" fontWeight="bold" gutterBottom>
+                            {name}
+                          </Typography>
+                          <Typography variant="body2" sx={{ color: 'gray', mt: 1 }}>
+                            {desc}
+                          </Typography>
                         </CardContent>
                         <Link href={link}>
                           <button className="btn btn-sm bg-red-400 text-white mt-4">

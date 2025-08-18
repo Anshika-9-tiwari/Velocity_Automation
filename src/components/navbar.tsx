@@ -18,6 +18,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Image from 'next/image';
 import Link from 'next/link';
+import HeaderTop from './headertop';
 
 const Navbar = () => {
   const theme = useTheme();
@@ -29,6 +30,7 @@ const Navbar = () => {
 
   const navItems = [
     { label: 'Home', link: '/' },
+    { label: 'About', link: '/about' },
     {
       label: 'Solutions',
       subItems: [
@@ -93,13 +95,15 @@ const Navbar = () => {
         zIndex: 1100,
       }}
     >
+      <HeaderTop />
+      {/* Main Navbar */}
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
-          <Box sx={{ px: 2, py: 1 }}>
+          <Box sx={{ px: 1, py: 1 }}>
             <Image
               src="/Velocity-ALogo2.png"
               alt="Logo"
-              width={200}
+              width={160}
               height={50}
               style={{ objectFit: 'contain' }}
             />
@@ -181,7 +185,7 @@ const Navbar = () => {
                     <Button
                       component={Link}
                       href={item.link}
-                      sx={{ px: 2, color: 'red' }}
+                      sx={{ px: 1, color: 'red' }}
                     >
                       {item.label}
                     </Button>

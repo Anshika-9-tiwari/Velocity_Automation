@@ -240,9 +240,9 @@ export default function ContactPage() {
                     onChange={handleChange}
                     label="Products"
                   >
-                    <MenuItem value="Automation">Siemens Products</MenuItem>
-                    <MenuItem value="Industrial Automation">Delta Products</MenuItem>
-                    <MenuItem value="PLC Networking">Control Panel</MenuItem>
+                    <MenuItem value="Siemens">Siemens Products</MenuItem>
+                    <MenuItem value="Delta Products">Delta Products</MenuItem>
+                    <MenuItem value="Control Panel">Control Panel</MenuItem>
                   </Select>
                 </FormControl>
                 <TextField
