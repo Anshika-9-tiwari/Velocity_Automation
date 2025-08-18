@@ -19,7 +19,7 @@ const SmartMachine = () => {
   const featureData = [
     {
       title: 'Real-Time Machine Monitoring',
-      image: '/Machine-Monitoring.png',
+      image: '/Machine-monitoring.png',
       desc: `Machine Monitoring helps industries improve productivity by tracking real-time performance. Our solution can be used for machine monitoring of different types of machines like stamping, blanking, reeling, peeling, welding, and die casting...`,
       features: [
         'Live machine utilization data',

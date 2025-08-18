@@ -76,58 +76,60 @@ const featureData = [
 export default function SmartWorkerPage() {
   return (
       <>
-        <PageBanner
-          title="Smart Worker"
-          description='Transforming manufacturing with smart worker  4.0 integration'
-          imageUrl="https://i.pinimg.com/736x/a0/d3/cf/a0d3cf6c661b56c511e57403f001442f.jpg" 
-        />
-        <SmartWorkerCard
-          cardData={smartWorkerCards}
-          pageTitle="Smart Worker Overview"
-          cardLink="/solutions/people"
-        />
-        {/* Detailed Sections */}
-      {featureData.map(({ title, image, desc, features }, i) => (
-        <div key={i} className="grid md:grid-cols-2 gap-10 px-6 md:px-16 py-12 items-center mt-5 bg-white text-black">
-          {/* Image */}
-          <motion.div
-            initial={{ opacity: 0, x: i % 2 === 0 ? -100 : 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <Image
-              src={image}
-              alt={title}
-              width={500}
-              height={400}
-              className="rounded-tr-4xl rounded-bl-4xl shadow-md object-cover w-full h-100"
-            />
-          </motion.div>
+        <div className="bg-white text-gray-500 overflow-x-hidden">
+          <PageBanner
+            title="Smart Worker"
+            description='Transforming manufacturing with smart worker  4.0 integration'
+            imageUrl="https://i.pinimg.com/736x/a0/d3/cf/a0d3cf6c661b56c511e57403f001442f.jpg" 
+          />
+          <SmartWorkerCard
+            cardData={smartWorkerCards}
+            pageTitle="Smart Worker Overview"
+            cardLink="/solutions/people"
+          />
+          {/* Detailed Sections */}
+          {featureData.map(({ title, image, desc, features }, i) => (
+            <div key={i} className="grid md:grid-cols-2 gap-10 px-6 md:px-16 py-12 items-center mt-5 bg-white text-black">
+              {/* Image */}
+              <motion.div
+                initial={{ opacity: 0, x: i % 2 === 0 ? -100 : 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+              <Image
+                src={image}
+                alt={title}
+                width={500}
+                height={400}
+                className="rounded-tr-4xl rounded-bl-4xl shadow-md object-cover w-full h-100"
+              />
+             </motion.div>
 
-          {/* Text */}
+              {/* Text */}
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="space-y-4"
+              >
+                <h2 className="text-2xl font-bold">{title}</h2>
+                <p>{desc}</p>
+                <h3 className="font-semibold text-lg mt-4 mb-2">Product Features:</h3>
+                <ul>{features.map((text, idx) => featureItem(text, idx))}</ul>
+              </motion.div>
+            </div>
+          ))}
+        
+          {/* Contact CTA */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-4"
           >
-            <h2 className="text-2xl font-bold">{title}</h2>
-            <p>{desc}</p>
-            <h3 className="font-semibold text-lg mt-4 mb-2">Product Features:</h3>
-            <ul>{features.map((text, idx) => featureItem(text, idx))}</ul>
+            <ContactComponent />
           </motion.div>
         </div>
-      ))}
-      
-      {/* Contact CTA */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-      >
-        <ContactComponent />
-      </motion.div>
       </>
   );
 }
