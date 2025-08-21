@@ -5,7 +5,7 @@ import { FaEnvelope, FaPhone, FaLinkedin, FaInstagram, FaWhatsapp } from 'react-
 
 export default function HeaderTop() {
   return (
-    <div className="w-full bg-gradient-to-r from-red-800 via-red-600 to-red-800 text-white text-sm px-4 py-1 flex flex-col md:flex-row justify-between items-center ">
+    <div className="w-full bg-gradient-to-r from-red-800 via-red-600 to-red-800 text-white text-sm px-0 md:px-4  py-1 md:py-2 flex flex-col md:flex-row justify-between items-center ">
         {/* Left: Email and Phone */}
         <div className="flex items-center gap-5">
           <div className="flex items-center gap-2">
