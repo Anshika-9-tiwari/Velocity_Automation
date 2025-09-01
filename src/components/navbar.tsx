@@ -30,23 +30,23 @@ const Navbar = () => {
 
   const navItems = [
     { label: 'Home', link: '/' },
-    { label: 'About', link: '/about' },
+    { label: 'ABOUT', link: '/about' },
     {
       label: 'Solutions',
       subItems: [
-        { label: 'People', link: '/solutions/people' },
-        { label: 'Quality', link: '/solutions/quality' },
-        { label: 'Machine', link: '/solutions/machine' },
-        { label: 'Security', link: '/solutions/security' },
+        { label: 'PEOPLE', link: '/solutions/people' },
+        { label: 'QUALITY', link: '/solutions/quality' },
+        { label: 'MACHINE', link: '/solutions/machine' },
+        { label: 'SECURITY', link: '/solutions/security' },
       ]
     },
     {
       label: 'Products',
       subItems: [
         { label: 'All Products', link: '/products' },
-        { label: 'Siemens', link: '/products/siemens' },
-        { label: 'Delta', link: '/products/delta' },
-        { label: 'Control Panel', link: '/products/control_panel' },
+        { label: 'SIEMENS', link: '/products/siemens' },
+        { label: 'B&R', link: '/products/delta' },
+        { label: 'CONTROL PANEL', link: '/products/control_panel' },
       ]
     },
     {
@@ -142,7 +142,7 @@ const Navbar = () => {
                       <Button
                         id={item.label}
                         endIcon={<ExpandMoreIcon />}
-                        sx={{ px: 2, color: 'black' }}
+                        sx={{ px: 2, color: 'black', fontSize: '0.9rem', '&:hover': { color: 'blue' } }}
                       >
                         {item.label}
                       </Button>
@@ -170,9 +170,11 @@ const Navbar = () => {
                             onClick={handleClose}
                             sx={{
                               color: 'gray',
+                              textTransform: 'uppercase',
                               '&:hover': {
                                 backgroundColor: '#f0f0f0',
-                                color: 'black',
+                                color: 'blue',
+                                fontSize: '0.9rem',
                               },
                             }}
                           >
@@ -185,7 +187,7 @@ const Navbar = () => {
                     <Button
                       component={Link}
                       href={item.link}
-                      sx={{ px: 1, color: 'red' }}
+                      sx={{ px: 1, color: 'black', '&:hover': { color: 'blue' }, fontSize: '0.9rem' }}
                     >
                       {item.label}
                     </Button>
@@ -225,7 +227,8 @@ const Navbar = () => {
                             textAlign: 'left',
                             width: '100%',
                             py: 1,
-                            color: 'red'
+                            color: 'gray',
+                            textTransform: 'uppercase', 
                           }}
                         >
                           {subItem.label}

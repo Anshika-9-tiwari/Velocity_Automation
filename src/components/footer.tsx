@@ -84,12 +84,12 @@ export default function Footer() {
           </Typography>
           <Typography variant="body2" sx={{ lineHeight: 2, maxWidth:350}}>
             <LocationOnIcon fontSize="small" sx={{ mr: 1}} />
-             Plot No. 2334 HBH Colony, Sector 28, Mathura Road Faridabad, Sector 28 Police Station, Haryana- 121003
+             Plot No. 2334 HBH Colony, Sector 28, <br />  Mathura Road Faridabad, Sector 28,<br />  Haryana- 121003
           </Typography>
            <Button
               variant="outlined"
               color="primary"
-              href="https://www.google.com/maps?q=Plot+No.+2334+HBH+Colony,+Sector+28,+Mathura+Road+Faridabad,+Sector+28+Police+Station,+Haryana-121003"
+              href="https://www.google.com/maps/place/Velocity+automation/@28.4388923,77.3094251,17z/data=!3m1!4b1!4m6!3m5!1s0x390cdd00164afdd1:0x3acf2f7228952e1d!8m2!3d28.4388923!4d77.312!16s%2Fg%2F11xsn9dzdp?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener"
             >

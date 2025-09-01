@@ -46,7 +46,7 @@ const SmartCard = ({
       />
     </figure>
     <div className="card-body">
-      <h2 className="card-title text-lg text-red-400">{title}</h2>
+      <h2 className="card-title text-lg text-green-700">{title}</h2>
     </div>
   </motion.div>
 );

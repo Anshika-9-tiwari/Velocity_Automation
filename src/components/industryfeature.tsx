@@ -40,7 +40,7 @@ const IndustryFeatureSection = ({ title, image, desc, extra, index }: FeaturePro
       >
         <h2 className="text-2xl font-bold">{title}</h2>
         <p>{desc}</p>
-        {extra && <p className=' italic text-red-400'>{extra}</p>}
+        {extra && <p className=' italic text-green-700'>{extra}</p>}
       </motion.div>
     </div>
   );

@@ -90,7 +90,7 @@ export default function ContactPage() {
      <div className="bg-white text-gray-800">
       <PageBanner
         title="Contact Us"
-        imageUrl="Contactbanner.jpeg"
+        imageUrl="/Contactbanner.jpeg"
         description=""
       />
 
@@ -119,7 +119,7 @@ export default function ContactPage() {
                   </Typography>
                 </Box>
                 <Typography sx={{ mb: 2, pl: 4, borderBottom: 1 }}>
-                  Plot No. 2334 HBH Colony, Sector 28, Mathura Road Faridabad, Sector 28 Police Station, Haryana- 121003
+                  Plot No. 2334 HBH Colony, Mathura Road Faridabad, Sector 28 Police Station, Haryana- 121003
                 </Typography>
 
                 <Box display="flex" alignItems="center" mb={2}>
@@ -129,7 +129,7 @@ export default function ContactPage() {
                   </Typography>
                 </Box>
                 <Typography sx={{ mb: 2, pl: 4, borderBottom: 1 }}>
-                   info@velocityautomation.co.in
+                   info@velocityautomation.co.in / enquiry@velocityautomation.co.in
                 </Typography>
 
                 <Box display="flex" alignItems="center" mb={2}>
@@ -148,14 +148,14 @@ export default function ContactPage() {
                     Office Hours
                   </Typography>
                 </Box>
-                <Typography sx={{ pl: 4, borderBottom: 1 }}>Mon – Sat: 9 AM – 6 PM</Typography>
+                <Typography sx={{ pl: 4, borderBottom: 1 }}>Mon – Sat: 9 AM – 7 PM</Typography>
               </CardContent>
             </Card>
 
             <Card sx={{ overflow: 'hidden', borderRadius: 3, boxShadow: 3 }}>
               <iframe
                 title="Google Map"
-                src="https://www.google.com/maps?q=Plot+No.+2334+HBH+Colony,+Sector+28,+Mathura+Road+Faridabad,+Sector+28+Police+Station,+Haryana-121003&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.3490586545777!2d77.3094250754937!3d28.438892275771106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cdd00164afdd1%3A0x3acf2f7228952e1d!2sVelocity%20automation!5e0!3m2!1sen!2sin!4v1756717192407!5m2!1sen!2sin"
                 width="100%"
                 height="250"
                 style={{ border: 0 }}
@@ -241,7 +241,7 @@ export default function ContactPage() {
                     label="Products"
                   >
                     <MenuItem value="Siemens">Siemens Products</MenuItem>
-                    <MenuItem value="Delta Products">Delta Products</MenuItem>
+                    <MenuItem value="Delta Products">B&R Products </MenuItem>
                     <MenuItem value="Control Panel">Control Panel</MenuItem>
                   </Select>
                 </FormControl>

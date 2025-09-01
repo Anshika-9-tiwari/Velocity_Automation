@@ -208,29 +208,31 @@ const Solutions = () => {
             py: 6,
             color: 'black',
             textAlign: 'center',
-            boxShadow: 1,
+            boxShadow: ' 0 4px 6px -1px rgba(0, 0, 0, 0.1)',
             mb: 2,
             overflow: 'hidden',
             position: 'relative',
           }}
         >
-          <Container sx={{ px: { xs: 2, sm: 3, md: 4 } }}>
+          <Container maxWidth="xl" sx={{ px: { xs: 2, sm: 3, md: 4 } }}>
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }}>
-              <Typography variant="h4" gutterBottom sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' } }}>
-                Our Products
+              <Typography 
+               variant="h4"
+               align="center"
+               fontWeight="bold"
+               gutterBottom
+               sx={{
+                background: "linear-gradient(135deg, black, #ff1c1c)",
+                WebkitBackgroundClip: "text",
+                color: "transparent",
+              }}>
+                 Our Products
               </Typography>
               <Typography mb={2}>Know more about our products service...</Typography>
-              <Box>
-                <Link href="/products">
-                  <Button variant="outlined" color="error"  sx={{ textTransform: 'none', mb: 3 }}>
-                    Explore All Products
-                  </Button>
-                </Link>
-              </Box>
             </motion.div>
           </Container>
           <Container sx={{ py: 5 }}>
-            <Grid container spacing={{ xs: 3, md: 4 }} justifyContent="center">
+            <Grid container spacing={{ xs: 3, md: 7 }} justifyContent="center">
               {[
                 {
                   title: 'Siemens',
@@ -286,25 +288,63 @@ const Solutions = () => {
                 </Grid>
               ))}
             </Grid>
+            <Box>
+              <Link href="/products">
+                <Button variant="outlined" color='error' sx={{ textTransform: 'none', mb: 0, mt: 8, color: 'maroon' }}>
+                  Explore All Products
+                </Button>
+              </Link>
+            </Box>
           </Container>
         </Box>
 
         {/* SMART FACTORY */}
-        <Container sx={{ py: 8, color: 'black' }}>
+        <Container maxWidth="xl" sx={{ py: 8, color: 'black', px: { xs: 2, sm: 4, md: 8 } }}>
           <motion.div initial={{ x: -100, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 1 }}>
             <Typography
-              variant="h4"
-              gutterBottom
-              sx={{ textAlign: 'center', fontSize: { xs: '1.75rem', md: '2.25rem' } }}
+               variant="h4"
+               align="center"
+               fontWeight="bold"
+               gutterBottom
+               sx={{
+                background: "linear-gradient(135deg, black, #ff1c1c)",
+                WebkitBackgroundClip: "text",
+                color: "transparent",
+                mb:4
+              }}
             >
               Smart Factory
             </Typography>
-            <Typography mb={2} sx={{ textAlign: 'center', color: 'gray' }}>
-              Automation and intelligent systems for manufacturing excellence using cutting-edge technologies.
+            <Typography mb={2} 
+             sx={{
+              textAlign:{xs:'center',md:'left'} ,  
+              }}>
+                At Velocity Automation, our Smart Factory solutions empower industries to move towards Industry 4.0 by integrating intelligent machines, connected workers, real-time monitoring, and  advanced security. From smart machines that boost productivity, to smart vision systems that ensure quality, to smart worker tools that enhance efficiency and smart security solutions that protect operations — we deliver end-to-end automation tailored to your needs.
             </Typography>
+            <Typography mb={2}
+             sx={{ 
+               textAlign:{xs:'center', md:'left'},  
+              }}>
+                With cutting-edge IoT, AI, and data-driven technologies, we help businesses achieve higher efficiency, lower downtime, and improved decision-making for a truly future-ready manufacturing ecosystem. Velocity Automation’s Smart Factory solutions bring intelligence, connectivity, and automation together to help industries embrace Industry 4.0. Our modular approach covers: 
+            </Typography>
+            <List sx={{ maxWidth: 710, margin: '0 auto', mb: 4, color: theme.palette.text.primary }}>
+              {[
+                'Smart Machines – Automated, efficient, and predictive systems that minimize downtime.',
+                'Smart Workers – Tools and platforms to empower employees with real-time insights and safety.',
+                'Smart Vision – AI-powered quality checks and defect detection for zero-compromise production.',
+                'Smart Security – Integrated digital and physical security to safeguard assets and operations.',
+              ].map((item) => (
+                <ListItem key={item} sx={{ justifyContent: 'center'  }}>
+                  <ListItemIcon sx={{ minWidth: 28 }}>
+                    <CheckCircleIcon fontSize="small" className="text-red-500" />
+                  </ListItemIcon>
+                  <ListItemText primary={item} primaryTypographyProps={{ fontSize: 15 }} />
+                </ListItem>
+              ))}
+            </List> 
             <Box textAlign="center">
               <Link href="/smartfactory">
-                <Button variant="outlined" sx={{ color: 'red' }}>
+                <Button variant="outlined" color='error' sx={{ color: 'green' }}>
                   Explore more
                 </Button>
               </Link>
@@ -321,12 +361,12 @@ const Solutions = () => {
             textAlign: 'center'
           }}
         >
-          <Container>
+          <Container maxWidth="xl" sx={{ px: { xs: 2, sm: 3, md: 4 } }}>
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }}>
               <Typography variant="h4" gutterBottom sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' }, mb:6 }}>
                 Industries We Serve
               </Typography>
-              <Grid container spacing={{ xs: 3, md: 3 }} justifyContent="center">
+              <Grid container spacing={{ xs: 3, md: 8 }} justifyContent="center">
                 {[
                   {
                     name: 'Warehouse & Logistics',

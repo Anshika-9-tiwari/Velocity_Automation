@@ -21,8 +21,8 @@ const products = [
     link: '/products/control_panel',
   },
   {
-    title: 'Delta',
-    description: 'We deliver all Delta products like plc, hmi, drives & motors etc',
+    title: 'B&R',
+    description: 'We deliver all B&R products like plc, hmi, drives & motors etc',
     image: '/deltaproducts.png',
     link: '/products/delta',
   },

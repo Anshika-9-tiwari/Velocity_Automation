@@ -46,7 +46,7 @@ const WarehouseLogisticsPage = () => {
             <p className="mb-4">
               Welcome to the future of warehousing and logistics, where artificial intelligence (AI) is unlocking unprecedented levels of efficiency and productivity. From intelligent inventory management to autonomous vehicles, AI solutions are elevating the logistics landscape, empowering businesses to meet the demands of today’s dynamic markets..
             </p>
-            <p className=' italic , text-red-500'>
+            <p className=' italic , text-green-700'>
               At its core, AI brings a new level of intelligence and automation to warehouse and logistics functions. By harnessing machine learning, predictive analytics, and robotic systems, AI enhances the accuracy, efficiency, and adaptability of every step in the supply chain journey...
             </p>
           </div>

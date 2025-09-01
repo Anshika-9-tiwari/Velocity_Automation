@@ -10,7 +10,7 @@ export default function HeaderTop() {
         <div className="flex items-center gap-5">
           <div className="flex items-center gap-2">
             <FaEnvelope className="text-success" />
-            <a href="mailto: info@velocityautomation.co.in" className="hover:underline"> info@velocityautomation.co.in</a>
+            <a href="mailto: info@velocityautomation.co.in" className="hover:underline">info@velocityautomation.co.in</a>
           </div>
           <div className="flex items-center gap-2">
             <FaPhone className="text-success" />

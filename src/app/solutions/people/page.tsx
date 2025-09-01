@@ -15,8 +15,8 @@ export default function PeopleSolution() {
       />
 
       {/* Intro */}
-      <Box sx={{ py: 6 , bgcolor:'white', color:'black'}}>
-        <Container>
+      <Box sx={{ py: 8 , bgcolor:'white', color:'black'}}>
+        <Container maxWidth="xl">
           <Typography variant="h4" fontWeight="bold" gutterBottom>
             People Solution
           </Typography>
@@ -26,7 +26,7 @@ export default function PeopleSolution() {
               mt: 2,
               pl: 2,
               borderLeft: '3px solid red',
-              maxWidth: '800px',
+              
             }}
           >
             Our People Solutions are designed to digitally transform your workforce by integrating smart HR tools, employee engagement analytics, and automation of administrative tasks.
@@ -60,10 +60,10 @@ export default function PeopleSolution() {
               className="rounded-tr-4xl rounded-bl-4xl mb-4 w-full h-90 object-cover shadow-lg"
             />
           </div>
-          <div className="w-full lg:w-1/2">
-            <h1 className="text-3xl font-semibold text-red-400">Industry Redefined</h1>
+          <div className="w-full lg:w-1/2 m-2 p-2">
+            <h1 className="text-3xl font-semibold text-green-600">Industry Redefined</h1>
             <p className="mt-4 text-base text-gray-700 leading-relaxed">
-            Velocity Automation is a leading technology company focused on delivering cutting-edge solutions and services that empower businesses to prosper in the digital era of Industry.
+              Velocity Automation is a leading technology company focused on delivering cutting-edge solutions and services that empower businesses to prosper in the digital era of Industry.
             </p>
             <Link href={'/industries/automotive'}>
              <button className="btn  mt-6">Learn More</button>
@@ -80,7 +80,7 @@ export default function PeopleSolution() {
           viewport={{ once: true }}
         >
           <div className="w-full lg:w-1/2 mt-5">
-            <h3 className="text-2xl font-semibold text-shadow-gray-700 text-red-400">
+            <h3 className="text-2xl font-semibold text-shadow-gray-700 text-green-600">
               Your Partner in Achieving Growth Through Digital Transformation
             </h3>
             <p className="mt-4 text-base text-gray-700 leading-relaxed">

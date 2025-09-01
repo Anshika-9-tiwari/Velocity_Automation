@@ -36,7 +36,7 @@ const ControlPanel = () => {
             />
           </div>
           <div className="w-full lg:w-1/2">
-            <h1 className="text-3xl font-semibold text-red-400">Control Panel</h1>
+            <h1 className="text-3xl font-semibold text-green-600">Control Panel</h1>
             <p className="mt-4 text-base text-gray-700 leading-relaxed">
               We provides end-to-end integration of control systems across different components of your manufacturing process chain. We focus on maximizing our customer’s impact by providing high-quality, efﬁcient and secure solutions and minimizing the time to value.
             </p>
@@ -55,7 +55,7 @@ const ControlPanel = () => {
           viewport={{ once: true }}
         >
           <div className="w-full lg:w-1/2 mt-5">
-            <h3 className="text-2xl font-semibold text-shadow-gray-700 text-red-400">
+            <h3 className="text-2xl font-semibold text-shadow-gray-700 text-green-600">
               Functions of a Control Panel
             </h3>
             <p className="mt-4 text-base text-gray-700 leading-relaxed">

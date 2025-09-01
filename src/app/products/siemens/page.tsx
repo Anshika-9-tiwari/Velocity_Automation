@@ -38,8 +38,8 @@ const Siemens = () => {
     image: 'https://atechnology.in/wp-content/uploads/2023/04/Scada-small.jpg',
   },
   {
-    title: 'Simatic IOT2000',
-    description: '',
+    title: 'Simatic iot gateway',
+    description: 'As IOT gateway, have multiple products inculding IOT2000, IOT2050, etc.',
     image: 'https://atechnology.in/wp-content/uploads/2023/04/simatic-iot2050-iot-gateway-views-removebg-preview.jpg'
   }
   
@@ -54,20 +54,20 @@ const Siemens = () => {
 
      {/* CourseCardSection */}
       <div className="max-w-8xl mx-auto px-6 md:px-12 py-18">
-        <h2 className="text-3xl font-bold text-center mb-12">Explore All Our Siemens Products </h2>
+        <h2 className="text-3xl font-bold text-center mb-16">Explore All Our Siemens Products </h2>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {products.map((training, index) => (
             <motion.div whileHover={{ scale: 1.03 }}>
               <div
                 key={index}
-                className="bg-base-50 shadow-xl rounded-xl overflow-hidden hover:shadow-2xl transition duration-300 border-gray-200 border-2"
+                className="overflow-hidden bg-base-50 shadow-xl rounded-xl hover:border-b-orange-300 hover:border-r-orange-300 transition duration-300 border-gray-100 border-3"
               >
                 <figure>
                   <img src={training.image} alt={training.title} className="w-full h-55 object-cover" />
                 </figure>
                 <div className="p-5 space-y-3 ">
-                  <h3 className="text-xl font-semibold">{training.title}</h3>
-                  <p className="text-red-500 italic">{training.description}</p>
+                  <h3 className="text-xl font-semibold  uppercase">{training.title}</h3>
+                  <p className="text-gray-800 italic">{training.description}</p>
                 </div>
               </div>
             </motion.div>

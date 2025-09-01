@@ -41,7 +41,7 @@ const Industries = () => {
           <p className="mb-4">
             At its core, our Machine Monitoring Solution is a comprehensive and intelligent system designed to provide real-time insights into the performance of your machines and production lines. It empowers you with valuable data, analytics, and visualization tools that enable data-driven decision-making, proactive maintenance, and continuous process improvement.
           </p>
-          <p className="mb-4 text-red-400 italic">
+          <p className="mb-4 text-green-600 italic">
           Real-time monitoring of machine status, cycle times, downtime reasons, and production rates offers unparalleled visibility into the heart of your manufacturing process. This, in turn, helps identify bottlenecks, optimize workflows, and make informed decisions to boost overall efficiency.
           </p>
           <p>
@@ -57,7 +57,7 @@ const Industries = () => {
           viewport={{ once: true }}
           className="max-w-8xl mx-auto px-6 md:px-12 py-16 "
         >
-          <h1 className="text-2xl font-semibold text-red-400 text-center mb-10 ">Industries across various sectors face a wide range of challenges. These challenges can vary depending on the industry and its specific circumstances, but some common challenges faced by industries include:!</h1>
+          <h1 className="text-2xl font-semibold text-orange-400 text-center mb-10 ">Industries across various sectors face a wide range of challenges. These challenges can vary depending on the industry and its specific circumstances, but some common challenges faced by industries include:!</h1>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-5  ">
             {[{
               icon: <CalendarMonthIcon className="text-5xl text-red-400 mb-2" />,
