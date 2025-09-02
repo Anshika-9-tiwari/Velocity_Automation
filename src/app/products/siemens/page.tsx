@@ -54,7 +54,12 @@ const Siemens = () => {
 
      {/* CourseCardSection */}
       <div className="max-w-8xl mx-auto px-6 md:px-12 py-18">
-        <h2 className="text-3xl font-bold text-center mb-16">Explore All Our Siemens Products </h2>
+        <h2 className="text-3xl font-bold text-center mb-12">
+          Explore All Our Siemens Products
+        </h2>
+        <p className="text-xl  mb-18">
+          Siemens offers world-class automation and digitalization solutions including PLCs, drives, HMIs, and industrial control systems. Trusted for reliability, innovation, and performance, Siemens products help industries achieve smarter production, higher efficiency, and seamless connectivity.
+        </p>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {products.map((training, index) => (
             <motion.div whileHover={{ scale: 1.03 }}>
@@ -63,7 +68,7 @@ const Siemens = () => {
                 className="overflow-hidden bg-base-50 shadow-xl rounded-xl hover:border-b-orange-300 hover:border-r-orange-300 transition duration-300 border-gray-100 border-3"
               >
                 <figure>
-                  <img src={training.image} alt={training.title} className="w-full h-55 object-cover" />
+                  <img src={training.image} alt={training.title} className="w-full h-60 object-cover" />
                 </figure>
                 <div className="p-5 space-y-3 ">
                   <h3 className="text-xl font-semibold  uppercase">{training.title}</h3>

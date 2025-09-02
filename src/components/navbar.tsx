@@ -45,7 +45,7 @@ const Navbar = () => {
       subItems: [
         { label: 'All Products', link: '/products' },
         { label: 'SIEMENS', link: '/products/siemens' },
-        { label: 'B&R', link: '/products/delta' },
+        { label: 'B&R', link: '/products/b&r' },
         { label: 'CONTROL PANEL', link: '/products/control_panel' },
       ]
     },

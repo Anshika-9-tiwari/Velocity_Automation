@@ -18,7 +18,13 @@ const ControlPanel = () => {
         imageUrl="/controlpanel.jpeg" 
       />
 
-      <div className="space-y-16 px-4 md:px-10 py-16 bg-white">
+      <div className="max-w-8xl mx-auto px-6 md:px-12 py-12 bg-base-50">
+        <h1 className="text-3xl font-semibold text-green-600">Control Panel</h1>
+        <p className="mt-3 text-base text-gray-700 leading-relaxed">
+         Our custom-designed industrial control panels provide reliable, safe, and efficient automation control. Built with high-quality components, they integrate PLCs, drives, HMIs, and instrumentation to ensure seamless operations. From design to commissioning, our panels are engineered for durability, precision, and compliance with international standards — delivering robust performance across diverse industries.
+        </p>
+      </div>
+      <div className="space-y-16 px-4 md:px-10 py-8 bg-white">
         <motion.div
           className="flex flex-col lg:flex-row items-center gap-10"
           initial={{ opacity: 0, y: 30 }}

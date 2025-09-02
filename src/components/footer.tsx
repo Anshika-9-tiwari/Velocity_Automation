@@ -102,7 +102,7 @@ export default function Footer() {
           <Typography variant="h6" sx={{ color: 'orange', mb: 2, fontWeight: 600 }}>
             Follow Us
           </Typography>
-          <Box display="flex" justifyContent={isMobile ? 'center' : 'flex-start'} gap={2}>
+          <Box display="flex" justifyContent={isMobile ? 'center' : 'flex-start'} gap={1}>
             <IconButton
               component="a"
               href="https://www.linkedin.com/company/velocity-automation/posts/?feedView=all"

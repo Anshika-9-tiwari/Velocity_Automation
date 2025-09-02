@@ -23,8 +23,8 @@ const products = [
   {
     title: 'B&R',
     description: 'We deliver all B&R products like plc, hmi, drives & motors etc',
-    image: '/deltaproducts.png',
-    link: '/products/delta',
+    image: 'https://www.br-automation.com/fileadmin/Netzwerk_u_Feldbusmodule-430574b1.jpg',
+    link: '/products/b&r',
   },
 ];
 
@@ -33,7 +33,7 @@ export default function Products() {
     <div className="bg-white text-gray-800">
       <PageBanner
         title="All Products"
-        description="Siemens , Delta & HMI & Control Panel"
+        description="Siemens , B&R  & Control Panel"
         imageUrl="https://atechnology.in/wp-content/uploads/2023/04/plc-1.jpg"
       />
 
@@ -49,7 +49,7 @@ export default function Products() {
                 className="bg-base-50 shadow-xl rounded-xl overflow-hidden hover:shadow-2xl transition duration-400 border-red-200 border-1"
               >
                 <figure>
-                  <img src={training.image} alt={training.title} className="w-full h-55 object-cover" />
+                  <img src={training.image} alt={training.title} className="w-full h-60 object-cover" />
                 </figure>
                 <div className="p-5 space-y-3 ">
                   <h3 className="text-xl font-semibold">{training.title}</h3>

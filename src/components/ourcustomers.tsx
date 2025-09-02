@@ -6,9 +6,10 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const logos = [
   { src: '/Imperial-auto.png', alt: 'Imperial Auto' },
-  { src: '/ALP-Logo.png', alt: 'ALP' },
-  { src: '/pprm-Logo.png', alt: 'PPRM' },
+  { src: '/ALPGroup.png', alt: 'ALP' },
+  { src: '/pprm.webp', alt: 'PPRM' },
   { src: '/Sambhv-logo.png', alt: 'Sambhav' },
+  { src: '/uvalidkoping.svg', alt: 'uv' },
   { src: '/VarunBeverages.png', alt: 'Varun Beverages' },
 ];
 
@@ -103,14 +104,13 @@ export default function CustomersSection() {
           {rail.map(({ src, alt }, idx) => (
             <div
               key={`${alt}-${idx}`}
-              className="shrink-0 flex items-center justify-center w-48 h-28"
+              className="shrink-0 flex items-center justify-center w-48 h-28 relative"
             >
               <Image
                 src={src}
                 alt={alt}
-                width={160}
-                height={80}
-                className="object-contain"
+                fill
+                className="object-contain p-2 transition duration-300"
                 priority
               />
             </div>

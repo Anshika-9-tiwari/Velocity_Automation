@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://velocity-automation.vercel.app',
+  siteUrl: 'https://www.velocityautomation.co.in',
   generateRobotsTxt: true, 
   sitemapSize: 5000, 
 

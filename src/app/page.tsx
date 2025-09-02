@@ -204,58 +204,66 @@ const Solutions = () => {
         {/* PRODUCTS SECTION */}
         <Box
           sx={{
-            bgcolor: '#fafcfc',
+            bgcolor: '#fcfcfc',
             py: 6,
             color: 'black',
-            textAlign: 'center',
+            // textAlign: { xs: 'center', md: 'left' },
             boxShadow: ' 0 4px 6px -1px rgba(0, 0, 0, 0.1)',
             mb: 2,
             overflow: 'hidden',
             position: 'relative',
           }}
         >
-          <Container maxWidth="xl" sx={{ px: { xs: 2, sm: 3, md: 4 } }}>
+          <Container maxWidth="xl" sx={{ px: { xs: 2, sm: 4, md: 8 } }}>
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }}>
               <Typography 
                variant="h4"
-               align="center"
+              //  align="center"
                fontWeight="bold"
                gutterBottom
                sx={{
                 background: "linear-gradient(135deg, black, #ff1c1c)",
                 WebkitBackgroundClip: "text",
                 color: "transparent",
+                mb:2,
+                textAlign:'center',
               }}>
-                 Our Products
+                Our Products
               </Typography>
-              <Typography mb={2}>Know more about our products service...</Typography>
+              <Box sx={{ width: 140, height: 3, bgcolor: 'green', mx: 'auto', mb: 5, borderRadius: 2 }} />
+              <Typography mb={2} className='text-gray-800'>
+                SIEMENS and B&R has been setting standards in open automation technology With a comprehensive portfolio of automation products, we offer all the necessary components for efficient control and monitoring of machines and systems. Our powerful and reliable products are perfectly coordinated to ensure maximum efficiency and performance. <br />At the heart of this seamless integration is our innovative engineering tool, Automation Studio. With Automation Studio, all SIEMENS & B&R products can be intuitively configured, programmed and optimized. This tight integration of our technologies enables significant increases in performance and quality, giving our customers a clear competitive advantage.
+              </Typography>
+              <Typography mb={4} className='text-gray-800'>
+                We provide a wide range of products, including industrial PCs, embedded controllers, I/O systems, drives, motors, and software solutions. Our products are designed to meet the highest quality standards and are used in various industries such as manufacturing, automotive, food and beverage, and more.
+              </Typography>
             </motion.div>
           </Container>
           <Container sx={{ py: 5 }}>
-            <Grid container spacing={{ xs: 3, md: 7 }} justifyContent="center">
+            <Grid container spacing={{ xs: 3, md: 4 }} justifyContent="center">
               {[
                 {
                   title: 'Siemens',
                   icon: <Inventory2Icon fontSize="large" className="text-red-400" />,
-                  desc: "Reliable automation and control products.",
+                  desc: "Innovative automation and digitalization solutions from Siemens, delivering reliable PLCs, drives, and industrial systems for smarter, more efficient operations.",
                   link: '/products/siemens',
                 },
                 {
-                  title: 'Delta',
+                  title: 'B&R',
                   icon: <ProductionQuantityLimitsIcon fontSize="large" className="text-red-400" />,
-                  desc: "Advanced industrial automation solutions.",
-                  link: '/products/delta',
+                  desc: "Advanced automation technology from B&R, offering scalable control, motion, and safety solutions that power intelligent, future-ready manufacturing",
+                  link: '/products/b&r',
                 },
                 {
                   title: 'Control Panel',
                   icon: <AutoAwesome fontSize="large" className="text-red-400" />,
-                  desc: "Customized control panels for industries.",
+                  desc: "Custom-built control panels designed for precision, safety, and efficiency — enabling seamless integration of automation systems across industries.",
                   link: '/products/control_panel',
                 },
               ].map(({ title, icon, desc, link }) => (
                 <Grid item xs={12} sm={10} md={4} key={title} component={'div' as any}>
                   <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.3 }}>
-                    <Card sx={{ textAlign: 'center', py: 3, px: 3, borderRadius: '16px' }}>
+                    <Card sx={{ textAlign: 'center', py: 3, px: 2, borderRadius: '12px', width: 350, mx: 'auto', bgcolor: '#ffffff', height: '100%' }}>
                       <Box
                         sx={{
                           width: 70,
@@ -272,14 +280,14 @@ const Solutions = () => {
                         {icon}
                       </Box>
                       <CardContent>
-                        <Typography variant="h6" fontWeight="bold">
+                        <Typography variant="h6" fontWeight="bold" mb={1} sx={{ textTransform: 'uppercase' }}>
                           {title}
                         </Typography>
                         <Typography variant="body2">{desc}</Typography>
                         <Link href={link}>
-                          <button className="btn btn-sm bg-green-300 text-black mt-4">
+                          <button className="btn btn-sm bg-green-300 text-black mt-8">
                             Read More
-                            <ArrowForward className="text-black-50 mt-1 cursor-pointer" />
+                            <ArrowForward className="text-gray-800 mt-1 cursor-pointer" />
                           </button>
                         </Link>
                       </CardContent>
@@ -289,11 +297,6 @@ const Solutions = () => {
               ))}
             </Grid>
             <Box>
-              <Link href="/products">
-                <Button variant="outlined" color='error' sx={{ textTransform: 'none', mb: 0, mt: 8, color: 'maroon' }}>
-                  Explore All Products
-                </Button>
-              </Link>
             </Box>
           </Container>
         </Box>
@@ -310,21 +313,16 @@ const Solutions = () => {
                 background: "linear-gradient(135deg, black, #ff1c1c)",
                 WebkitBackgroundClip: "text",
                 color: "transparent",
-                mb:4
+                mb:2
               }}
             >
               Smart Factory
             </Typography>
-            <Typography mb={2} 
-             sx={{
-              textAlign:{xs:'center',md:'left'} ,  
-              }}>
+            <Box sx={{ width: 150, height: 4, bgcolor: 'green', mx: 'auto', mb: 5, borderRadius: 2 }} />
+            <Typography mb={2} className='text-gray-800' >
                 At Velocity Automation, our Smart Factory solutions empower industries to move towards Industry 4.0 by integrating intelligent machines, connected workers, real-time monitoring, and  advanced security. From smart machines that boost productivity, to smart vision systems that ensure quality, to smart worker tools that enhance efficiency and smart security solutions that protect operations — we deliver end-to-end automation tailored to your needs.
             </Typography>
-            <Typography mb={2}
-             sx={{ 
-               textAlign:{xs:'center', md:'left'},  
-              }}>
+            <Typography mb={2} className='text-gray-800'>
                 With cutting-edge IoT, AI, and data-driven technologies, we help businesses achieve higher efficiency, lower downtime, and improved decision-making for a truly future-ready manufacturing ecosystem. Velocity Automation’s Smart Factory solutions bring intelligence, connectivity, and automation together to help industries embrace Industry 4.0. Our modular approach covers: 
             </Typography>
             <List sx={{ maxWidth: 710, margin: '0 auto', mb: 4, color: theme.palette.text.primary }}>
@@ -363,10 +361,11 @@ const Solutions = () => {
         >
           <Container maxWidth="xl" sx={{ px: { xs: 2, sm: 3, md: 4 } }}>
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }}>
-              <Typography variant="h4" gutterBottom sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' }, mb:6 }}>
+              <Typography variant="h4" gutterBottom sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' }, mb:2 }}>
                 Industries We Serve
               </Typography>
-              <Grid container spacing={{ xs: 3, md: 8 }} justifyContent="center">
+              <Box sx={{ width: 200, height: 3, bgcolor: 'green', mx: 'auto', mb: 10, borderRadius: 2 }} />
+              <Grid container spacing={{ xs: 3, md: 3 }} justifyContent="center">
                 {[
                   {
                     name: 'Warehouse & Logistics',
@@ -409,7 +408,7 @@ const Solutions = () => {
                           flexDirection: "column",
                           alignItems: 'center',
                           justifyContent: 'flex-start',
-                          width: 350, 
+                          width: 320, 
                           mx: "auto", 
                           bgcolor: '#ffffff',
                           py: 3,

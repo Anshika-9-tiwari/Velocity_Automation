@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://velocity-automation.vercel.app
+Host: https://www.velocityautomation.co.in
 
 # Sitemaps
-Sitemap: https://velocity-automation.vercel.app/sitemap.xml
+Sitemap: https://www.velocityautomation.co.in/sitemap.xml
