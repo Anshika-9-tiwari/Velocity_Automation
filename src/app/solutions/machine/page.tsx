@@ -27,7 +27,7 @@ const Industries = () => {
   ];
 
   return (
-    <div className="bg-white text-gray-800 overflow-x-hidden">
+    <div className="bg-white text-gray-800 overflow-hidden">
         <PageBanner
           title="Machine Monitoring"
           description='Maximizing Output, Minimizing Downtime'
@@ -55,9 +55,9 @@ const Industries = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="max-w-8xl mx-auto px-6 md:px-12 py-16 "
+          className="max-w-8xl mx-auto px-1 md:px-12 py-16 "
         >
-          <h1 className="text-2xl font-semibold text-orange-400 text-center mb-10 ">Industries across various sectors face a wide range of challenges. These challenges can vary depending on the industry and its specific circumstances, but some common challenges faced by industries include:!</h1>
+          <h1 className="text-2xl font-semibold text-blue-900 mb-10 ">Industries across various sectors face a wide range of challenges. These challenges can vary depending on the industry and its specific circumstances, but some common challenges faced by industries include:!</h1>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-5  ">
             {[{
               icon: <CalendarMonthIcon className="text-5xl text-red-400 mb-2" />,

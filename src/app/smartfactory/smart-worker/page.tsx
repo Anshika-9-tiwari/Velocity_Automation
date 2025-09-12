@@ -76,7 +76,7 @@ const featureData = [
 export default function SmartWorkerPage() {
   return (
       <>
-        <div className="bg-white text-gray-500 overflow-x-hidden">
+        <div className="bg-white text-gray-500 overflow-hidden">
           <PageBanner
             title="Smart Worker"
             description='Transforming manufacturing with smart worker  4.0 integration'

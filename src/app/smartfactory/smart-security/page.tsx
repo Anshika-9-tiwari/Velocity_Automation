@@ -56,7 +56,7 @@ const SmartSecurity = () => {
   ];
 
   return (
-    <div className="bg-white text-gray-900 overflow-x-hidden">
+    <div className="bg-white text-gray-900 overflow-hidden">
       <PageBanner
         title="Smart Security"
         description="Transforming manufacturing with smart security 4.0 integration"

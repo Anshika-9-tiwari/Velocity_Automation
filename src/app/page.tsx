@@ -230,7 +230,7 @@ const Solutions = () => {
               }}>
                 Our Products
               </Typography>
-              <Box sx={{ width: 140, height: 3, bgcolor: 'green', mx: 'auto', mb: 5, borderRadius: 2 }} />
+              <Box sx={{ width: 100, height: 3, bgcolor: 'green', mx: 'auto', mb: 5, borderRadius: 2 }} />
               <Typography mb={2} className='text-gray-800'>
                 SIEMENS and B&R has been setting standards in open automation technology With a comprehensive portfolio of automation products, we offer all the necessary components for efficient control and monitoring of machines and systems. Our powerful and reliable products are perfectly coordinated to ensure maximum efficiency and performance. <br />At the heart of this seamless integration is our innovative engineering tool, Automation Studio. With Automation Studio, all SIEMENS & B&R products can be intuitively configured, programmed and optimized. This tight integration of our technologies enables significant increases in performance and quality, giving our customers a clear competitive advantage.
               </Typography>
@@ -318,7 +318,7 @@ const Solutions = () => {
             >
               Smart Factory
             </Typography>
-            <Box sx={{ width: 150, height: 4, bgcolor: 'green', mx: 'auto', mb: 5, borderRadius: 2 }} />
+            <Box sx={{ width: 100, height: 4, bgcolor: 'green', mx: 'auto', mb: 5, borderRadius: 2 }} />
             <Typography mb={2} className='text-gray-800' >
                 At Velocity Automation, our Smart Factory solutions empower industries to move towards Industry 4.0 by integrating intelligent machines, connected workers, real-time monitoring, and  advanced security. From smart machines that boost productivity, to smart vision systems that ensure quality, to smart worker tools that enhance efficiency and smart security solutions that protect operations — we deliver end-to-end automation tailored to your needs.
             </Typography>
@@ -364,7 +364,7 @@ const Solutions = () => {
               <Typography variant="h4" gutterBottom sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' }, mb:2 }}>
                 Industries We Serve
               </Typography>
-              <Box sx={{ width: 200, height: 3, bgcolor: 'green', mx: 'auto', mb: 10, borderRadius: 2 }} />
+              <Box sx={{ width: 130, height: 3, bgcolor: 'green', mx: 'auto', mb: 10, borderRadius: 2 }} />
               <Grid container spacing={{ xs: 3, md: 3 }} justifyContent="center">
                 {[
                   {

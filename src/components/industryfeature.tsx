@@ -29,7 +29,7 @@ const IndustryFeatureSection = ({ title, image, desc, extra, index }: FeaturePro
           alt={title}
           width={600}
           height={400}
-          className="rounded-3xl shadow-md object-cover w-full h-95"
+          className="rounded-3xl shadow-md object-cover w-full h-1/2"
         />
       </motion.div>
       <motion.div

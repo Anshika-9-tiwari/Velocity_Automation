@@ -51,13 +51,13 @@ export default function PeopleSolution() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="w-full lg:w-1/2 ">
+          <div className="w-full md:w-1/2 ">
             <Image
               src="/Robotics-Img.jpeg"
               alt="Robotics"
               width={530}
               height={200}
-              className="rounded-tr-4xl rounded-bl-4xl mb-4 w-full h-90 object-cover shadow-lg"
+              className="rounded-tr-4xl rounded-bl-4xl mb-4 w-full h-96 object-cover shadow-lg"
             />
           </div>
           <div className="w-full lg:w-1/2 m-2 p-2">

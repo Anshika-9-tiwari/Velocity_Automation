@@ -27,7 +27,7 @@ const videofile = () => {
             <video
               className="w-full h-1/2 object-cover"
               controls
-              autoPlay
+              // autoPlay
               muted
               // loop
               playsInline

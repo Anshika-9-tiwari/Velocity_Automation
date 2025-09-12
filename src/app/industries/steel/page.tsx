@@ -30,7 +30,7 @@ const featureData = [
 
 const Steel = () => {
   return (
-    <div className="bg-white text-gray-800 overflow-x-hidden">
+    <div className="bg-white text-gray-800 overflow-hidden">
       <PageBanner
         title="Steel Industry"
         description='Transforming manufacturing with Steel Industry 4.0 integration'

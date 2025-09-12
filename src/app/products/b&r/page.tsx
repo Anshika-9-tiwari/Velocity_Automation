@@ -5,7 +5,7 @@ import ContactComponent from '../../contact/contactcomponent';
 import { motion } from 'framer-motion';
 import CustomersSection from '@/components/ourcustomers';
 
-const Delta = () => {
+const BandR = () => {
   const products = [
   {
     title: 'B&R  PLC',
@@ -80,4 +80,4 @@ const Delta = () => {
   );
 };
 
-export default Delta;
+export default BandR;
