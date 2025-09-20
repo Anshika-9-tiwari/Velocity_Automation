@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // ✅ Export static HTML (needed for cPanel)
-  output: 'export',
 
   eslint: {
     ignoreDuringBuilds: true,
