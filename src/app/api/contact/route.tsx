@@ -23,13 +23,21 @@ export async function POST(req: NextRequest) {
         headers: { 'Content-Type': 'application/json' },
       });
     }
+    // Basic email format validation
+    if (!process.env.NOTIFY_EMAIL) {
+      return new Response(JSON.stringify({ error: 'Notification email environment variable not set' }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
+    const recipients = process.env.NOTIFY_EMAIL.split(",");
 
     // Send notification email to your team (with CC + BCC)
     await resend.emails.send({
       from: 'Velocity Automation <enquiry@velocityautomation.co.in>',
-      to: process.env.NOTIFY_EMAIL!, 
-      cc: process.env.CC_EMAIL,     
-      bcc: process.env.BCC_EMAIL,   
+      to: recipients, 
+      // cc: process.env.CC_EMAIL,     
+      // bcc: process.env.BCC_EMAIL,   
       subject: `New Contact Form Submission: ${full_name}`,
       html: `
         <h2>New User Request</h2>
