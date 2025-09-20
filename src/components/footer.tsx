@@ -44,7 +44,7 @@ export default function Footer() {
             </Typography>
           </Box>
         </Grid>
-
+ 
         {/* Quick Links */}
         <Grid item xs={12} md={3} component={'div' as any}>
           <Typography variant="h6" sx={{ color: 'orange', mb: 2, fontWeight: 600 }}>
@@ -97,9 +97,9 @@ export default function Footer() {
               href="https://www.google.com/maps/place/Velocity+automation/@28.4388923,77.3094251,17z/data=!3m1!4b1!4m6!3m5!1s0x390cdd00164afdd1:0x3acf2f7228952e1d!8m2!3d28.4388923!4d77.312!16s%2Fg%2F11xsn9dzdp?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener"
-              sx={{ mt: 2, ml:1, borderColor: 'white', color: 'white', '&:hover': { borderColor: 'orange', backgroundColor: 'orange' } }}
+              sx={{ mt: 2, ml:4, borderColor: 'white', color: 'white', '&:hover': { borderColor: 'orange', backgroundColor: 'orange' } }}
             >
-              Directions on Google Maps
+              Get Directions 
             </Button>
         </Grid>
 

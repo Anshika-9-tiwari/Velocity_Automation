@@ -27,7 +27,7 @@ const featureData = [
   {
     title: 'Our Expertise',
     image: '/controlsystem.jpg',
-    desc: `(1) My first employer.  (2) All the stuff I've learned and projects I've been working on. (3) PLC/DCS application logic design, development & testing, (4) PLC/DCS Control Panel design, fabrication and Supply, (5) PLC/DCS Control Panel installation, commissioning and maintenance, (6) SCADA/HMI application design, development & testing, (7) SCADA/HMI Control Panel design, fabrication and Supply,  (8) SCADA/HMI Control Panel installation, commissioning and maintenance, (9) Customized reporting requirements with industry standard tools.`,
+    desc: `(1) PLC, SCADA, HMI & DCS based automation, (2) End-to-end factory & process automation, (3) PLC/DCS application logic design, development & testing, (4) IoT-enabled monitoring & control , (5) Remote monitoring & predictive maintenance systems , (6) Siemens, Allen Bradley, Schneider, Mitsubishi platforms, (7) Advanced simulation, testing, and commissioning ,  (8) SCADA/HMI Control Panel installation, commissioning and maintenance, (9) Automotive, Food & Beverages, Manufacturing, Warehouse & Logistics , (10) Annual maintenance contracts (AMC).`,
     extra: `Also, Vision-based system to monitor the usage of personal protective equipment (PPE) in a every factory for worker’s safety and health....`,
   },
   {
