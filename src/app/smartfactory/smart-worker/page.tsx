@@ -8,6 +8,30 @@ import { PiSealCheckBold } from 'react-icons/pi';
 import { motion } from 'framer-motion';
 import ContactComponent from '../../contact/contactcomponent';
 
+const slides = [
+  {
+    title: "Empowering the Connected Workforce",
+    description: "Integrating digital tools and IoT devices to enhance worker safety & performance.",
+    imageUrl: "/feildsource.jpeg",
+  },
+  {
+    title: "Smart Wearables for Industrial Safety",
+    description: "Monitoring real-time health, movement, & environmental conditions for workplace safety.",
+    imageUrl: "/energy.webp",
+  },
+  {
+    title: "AI-Driven Workforce Efficiency",
+    description: "Leveraging data insights to optimize workforce operations & reduce downtime.",
+    imageUrl: "/ai-based.webp",
+  },
+  {
+    title: "Digital Collaboration & Training",
+    description: "Using AR/VR and digital interfaces for enhanced communication.",
+    imageUrl: "/industry-control.jpg",
+  },
+];
+
+
 const smartWorkerCards = [
   { image: '/facial-recog.jpeg', title: 'Face Recognition' },
   { image: '/workforce-cost.jpeg', title: 'Workforce Cost Analytics' },
@@ -77,11 +101,11 @@ export default function SmartWorkerPage() {
   return (
       <>
         <div className="bg-white text-gray-500 overflow-hidden">
-          <PageBanner
-            title="Smart Worker"
-            description='Transforming manufacturing with smart worker  4.0 integration'
-            imageUrl="https://i.pinimg.com/736x/a0/d3/cf/a0d3cf6c661b56c511e57403f001442f.jpg" 
-          />
+          {/* banner */}
+          <div>
+            <PageBanner slides={slides} />
+          </div>
+
           <SmartWorkerCard
             cardData={smartWorkerCards}
             pageTitle="Smart Worker Overview"

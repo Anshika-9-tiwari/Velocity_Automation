@@ -8,6 +8,30 @@ import ContactComponent from '../../contact/contactcomponent';
 import { PiSealCheckBold } from 'react-icons/pi';
 import PageBanner from '@/components/pageBanner';
 
+const slides = [
+  {
+    title: "Industrial Access & Perimeter Control",
+    description: "Automated entry systems and smart monitoring to secure factory environments.",
+    imageUrl: "https://i.pinimg.com/736x/14/f6/44/14f644977bc0df5e99a5da21fead7e86.jpg",
+  },
+  {
+    title: "Next-Gen Smart Security Systems",
+    description: "Empowering industries with AI-driven surveillance and real-time threat detection.",
+    imageUrl: "/smartgate.jpeg",
+  },
+  {
+    title: "IoT-Based Surveillance Integration",
+    description: "Seamlessly connect smart cameras, sensors, and analytics across your facility.",
+    imageUrl: "https://i.pinimg.com/736x/0d/0a/3b/0d0a3b8a7d34e0e7a3504fcf325e4824.jpg",
+  },
+  {
+    title: "24/7 Monitoring & Data Protection",
+    description: "Ensure safety and data privacy with automated monitoring and instant alerts.",
+    imageUrl: "https://i.pinimg.com/736x/e5/a8/14/e5a814a6a55aafb33ee1c1f17583ef62.jpg",
+  },
+];
+
+
 const featureItem = (text: string, index: number) => (
   <li key={index} className="flex items-start gap-2 mb-2">
     <PiSealCheckBold className="text-red-400 mt-1" />
@@ -57,11 +81,10 @@ const SmartSecurity = () => {
 
   return (
     <div className="bg-white text-gray-900 overflow-hidden">
-      <PageBanner
-        title="Smart Security"
-        description="Transforming manufacturing with smart security 4.0 integration"
-        imageUrl="https://i.pinimg.com/736x/a0/d3/cf/a0d3cf6c661b56c511e57403f001442f.jpg"
-      />
+      {/* banner */}
+      <div>
+        <PageBanner slides={slides} />
+      </div>
 
       <SmartFactoryCard
         cardData={featureData.map(({ title, image }) => ({ title, image }))}

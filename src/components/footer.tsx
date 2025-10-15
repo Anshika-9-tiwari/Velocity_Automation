@@ -80,10 +80,15 @@ export default function Footer() {
           <Typography variant="body2" sx={{ lineHeight: 2 }}>
             <PhoneIcon fontSize="small" sx={{ mr: 1 }} /> +91 98182 93887
           </Typography>
-          <Typography variant="body2" sx={{ lineHeight: 2 }}>
-            <EmailIcon fontSize="small" sx={{ mr: 1 }} /> info@velocityautomation.co.in
-          </Typography>
-           <Box display={'flex'} alignItems={'flex-start'} mt={1} >
+          <Box display={'flex'} alignItems={'flex-start'} mt={1.5}>
+            <EmailIcon fontSize="small" sx={{ mr: 1 }} />
+            <Box>
+              <Typography variant="body2">info@velocityautomation.co.in,</Typography>
+              <Typography variant='body2'>  sales@velocityautomation.co.in</Typography>
+              {/* <Typography variant='body2'>enquiry@velocityautomation.co.in</Typography> */}
+            </Box>
+           </Box>
+           <Box display={'flex'} alignItems={'flex-start'} mt={1.5} >
             <LocationOnIcon fontSize="medium" sx={{ mr: 1}} />
             <Box>
               <Typography variant="body2">Plot No. 2334 HBH Colony, Sector 28,</Typography>
@@ -171,7 +176,7 @@ export default function Footer() {
         }}
       >
         <Typography variant="body2" mt={1}>
-          © {new Date().getFullYear()} Velocity Automation. All rights reserved.
+          © {new Date().getFullYear()} Velocity Automation LLP.  All rights reserved.
         </Typography>
       </Box>
     </Box>

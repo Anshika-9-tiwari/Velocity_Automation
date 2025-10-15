@@ -34,6 +34,29 @@ import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantity
 import ContactComponent from '../app/contact/contactcomponent';
 import CustomersSection from '@/components/ourcustomers';
 
+ const slides = [
+    {
+      title: "Innovative Automation Solutions",
+      description: "Empowering industries with smart, efficient automation.",
+      imageUrl: "https://i.pinimg.com/736x/c4/e4/02/c4e402cd3ccb102c939186617ddbe4a5.jpg",
+    },
+    {
+      title: "Tailored Engineering Expertise",
+      description: "Customized industrial automation to boost productivity.",
+      imageUrl: "/steelplant.jpg",
+    },
+     {
+      title: "Innovative Automation Solutions",
+      description: "Empowering industries with smart, efficient automation.",
+      imageUrl: "https://i.pinimg.com/1200x/d5/18/ea/d518ea5c54db0b561fc8ccd892bc94f4.jpg",
+    },
+    {
+      title: "Tailored Engineering Expertise",
+      description: "Customized industrial automation to boost productivity.",
+      imageUrl: "/industry.jpg",
+    },
+  ];
+
 const solutionsData = [
   {
     title: 'People',
@@ -82,11 +105,9 @@ const Solutions = () => {
 
   return (
     <>
-      <PageBanner
-        title="Industrial Automation & Automation Services"
-        description="Innovating Solutions for Smart Industries"
-        imageUrl="https://i.pinimg.com/736x/56/d8/a1/56d8a14df98686062ee2367a10514052.jpg"
-      />
+      <div className='bg-white'>
+        <PageBanner slides={slides} />
+      </div>
 
       <Box sx={{ bgcolor: 'white' }}>
         {/* customer */}

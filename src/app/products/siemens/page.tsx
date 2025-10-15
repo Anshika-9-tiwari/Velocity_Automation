@@ -5,6 +5,30 @@ import ContactComponent from '../../contact/contactcomponent';
 import { motion } from 'framer-motion';
 import CustomersSection from '@/components/ourcustomers';
 
+const slides = [
+    {
+      title: "Siemens PLC",
+      description: "We serve all siemens PLC like LOGO, S7-1200 etc.",
+      imageUrl: "https://atechnology.in/wp-content/uploads/2023/04/plc-1.jpg",
+    },
+    {
+      title: "Siemens HMI",
+      description: "We Deliver all HMI Products Like- WinCC Unified HMI, etc",
+      imageUrl: "https://atechnology.in/wp-content/uploads/2023/04/CPMFORT-PANEL-PHOTO-removebg-preview.jpg",
+    },
+     {
+      title: "Siemens AC Drive",
+      description: "We serve all Siemens AC Drives like V20, G120, etc.",
+      imageUrl: "https://atechnology.in/wp-content/uploads/2023/04/4.jpg",
+    },
+    {
+      title: "Siemens Sematic SCADA",
+      description: "The SIMATIC WinCC V7 SCADA software is an innovative, system etc",
+      imageUrl: "https://atechnology.in/wp-content/uploads/2023/04/Scada-small.jpg",
+    },
+  ];
+
+
 const Siemens = () => {
   const products = [
   {
@@ -14,7 +38,7 @@ const Siemens = () => {
   },
   {
     title: 'Siemens HMI',
-    description: 'We Deliver all HMI Products Like- Basic Panels 1st Gen, 2nd Gen, Comfort Panels 1st Gen - Standard devices',
+    description: 'We Deliver all HMI Products Like- WinCC Unified HMI, Basic Panels 1st Gen, 2nd Gen, etc.',
     image: 'https://atechnology.in/wp-content/uploads/2023/04/CPMFORT-PANEL-PHOTO-removebg-preview.jpg',
   },
   {
@@ -24,7 +48,7 @@ const Siemens = () => {
   },
   {
     title: 'Siemens Servo System',
-    description: 'We serve all siemens Servo System  like V90 SERVO, S120,  etc',
+    description: 'We serve all siemens Servo System  like S200, S210, S120,  etc',
     image: 'https://atechnology.in/wp-content/uploads/2023/04/sinamics-s210-servo-drive-system-product-image-removebg-preview.jpg',
   },
   {
@@ -46,11 +70,11 @@ const Siemens = () => {
 ];
   return (
     <div className="bg-white text-gray-800">
-      <PageBanner
-        title="Siemens Products"
-        description='PLC, HMI, CONTROL UNIT, DRIVES & MOTORS etc '
-        imageUrl="https://atechnology.in/wp-content/uploads/2023/04/CPMFORT-PANEL-PHOTO-removebg-preview.jpg" 
-      />
+
+     {/* banner */}
+     <div>
+       <PageBanner slides={slides} />
+     </div>
 
      {/* CourseCardSection */}
       <div className="max-w-8xl mx-auto px-6 md:px-12 py-18">

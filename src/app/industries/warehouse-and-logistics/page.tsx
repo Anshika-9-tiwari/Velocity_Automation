@@ -5,6 +5,30 @@ import ContactComponent from '../../contact/contactcomponent';
 import IndustryFeatureSection from '@/components/industryfeature';
 import { motion } from 'framer-motion';
 
+const slides = [
+  {
+    title: "Smart Warehouse Automation",
+    description: "Streamlining storage & dispatch with AI-driven warehouse systems.",
+    imageUrl: "https://i.pinimg.com/1200x/f2/84/1b/f2841b367a366c58cca61833d1578d5f.jpg",
+  },
+  {
+    title: "Seamless Logistics Management",
+    description: "Optimizing supply chain flow with real-time data & automation.",
+    imageUrl: "https://i.pinimg.com/1200x/5b/0f/df/5b0fdf9a577727c05d110dbde56699cf.jpg",
+  },
+  {
+    title: "AI-Powered Tracking Systems",
+    description: "Enhancing visibility & accuracy across warehouse operations.",
+    imageUrl: "/Warehousemanage.jpeg",
+  },
+  {
+    title: "Efficiency Through Smart Connectivity",
+    description: "Integrating IoT devices for faster, & more efficient logistics.",
+    imageUrl: "https://i.pinimg.com/1200x/36/f4/2a/36f42ade32d107e564778b634de9cfe4.jpg",
+  },
+];
+
+
 const WarehouseLogisticsPage = () => {
   const featureData = [
     {
@@ -35,11 +59,12 @@ const WarehouseLogisticsPage = () => {
 
   return (
     <div className="bg-white text-gray-800">
-       <PageBanner
-          title=" Warehouse & Logistics Industries"
-          description='Transforming manufacturing with  Warehouse & Logistics Industries  4.0 integration'
-          imageUrl="https://i.pinimg.com/736x/a7/d4/a4/a7d4a485e166fa7b5047746d7419341d.jpg" 
-        />
+        {/* banner-section */}
+        <div>
+          <PageBanner slides={slides}/>
+        </div>
+
+        {/* Overview */}
         <div className="px-6 md:px-16 py-12">
           <div className="mb-12">
             <h1 className="text-3xl font-bold mb-4">Overview</h1>

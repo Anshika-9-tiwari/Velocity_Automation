@@ -1,122 +1,69 @@
 'use client';
 
-import { useRef, useEffect, useState } from 'react';
-import Image from 'next/image';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const logos = [
-  { src: '/Imperial-auto.png', alt: 'Imperial Auto' },
-  { src: '/ALPGroup.png', alt: 'ALP' },
-  { src: '/pprm.webp', alt: 'PPRM' },
-  { src: '/Sambhv-logo.png', alt: 'Sambhav' },
-  { src: '/uvalidkoping.svg', alt: 'uv' },
-  { src: '/VarunBeverages.png', alt: 'Varun Beverages' },
-];
-
-// Triple duplication for smoother loop effect
-const rail = [...logos, ...logos, ...logos];
-
-export default function CustomersSection() {
-  const railRef = useRef<HTMLDivElement>(null);
-  const [isAutoScrolling, setIsAutoScrolling] = useState(true);
-  const resumeTimeout = useRef<NodeJS.Timeout | null>(null);
-
-  useEffect(() => {
-    const container = railRef.current;
-    if (!container || !isAutoScrolling) return;
-
-    const scroll = () => {
-      container.scrollBy({ left: 1, behavior: 'smooth' });
-
-      // Reset scroll when reaching near end
-      if (container.scrollLeft >= container.scrollWidth / 1.5) {
-        container.scrollLeft = container.scrollWidth / 3;
-      }
-    };
-
-    const interval = setInterval(scroll, 15);
-    return () => clearInterval(interval);
-  }, [isAutoScrolling]);
-
-  const restartAutoScroll = () => {
-    if (resumeTimeout.current) clearTimeout(resumeTimeout.current);
-    resumeTimeout.current = setTimeout(() => {
-      setIsAutoScrolling(true);
-    }, 3000);
+function CustomersSection() {
+  const settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 1500,
+    autoplaySpeed: 1500,
+    cssEase: "linear",
+    pauseOnHover: true,
+    responsive: [
+      { breakpoint: 1280, settings: { slidesToShow: 5 } },
+      { breakpoint: 1024, settings: { slidesToShow: 4 } },
+      { breakpoint: 768, settings: { slidesToShow: 3 } },
+      { breakpoint: 480, settings: { slidesToShow: 2 } },
+    ],
   };
 
-  const nudge = (dir: 'left' | 'right') => {
-    setIsAutoScrolling(false);
-    railRef.current?.scrollBy({
-      left: dir === 'left' ? -200 : 200,
-      behavior: 'smooth',
-    });
-    restartAutoScroll();
-  };
-
-  useEffect(() => {
-    const container = railRef.current;
-    if (container) {
-      // Start from the middle block to allow loop scroll
-      container.scrollLeft = container.scrollWidth / 3;
-    }
-  }, []);
+  const logos = [
+    { src: "/Imperial-auto.png", alt: "Imperial Auto" },
+    { src: "/ALPGroup.png", alt: "ALP Group" },
+    { src: "/pprm.webp", alt: "PPRM" },
+    { src: "/Sambhv-logo.png", alt: "Sambhav" },
+    { src: "/uvalidkoping.svg", alt: "Uvalidkoping" },
+    { src: "/GPS-logo.svg", alt: "GPS" },
+    { src: "/jai-sat.png", alt: "Jai Sat" },
+    { src: "/jindal-steel-logo-.svg", alt: "Jindal Steel" },
+    { src: "/VarunBeverages.png", alt: "Varun Beverages" },
+  ];
 
   return (
-    <section className="py-16 bg-gray-50 text-center shadow-sm">
-      {/* Heading */}
-      <div className="mb-14">
-        <div className="badge bg-gray-50 border-1 border-error text-error px-4 py-2 mb-4">
-          Trusted&nbsp;By
-        </div>
-        <h2 className="text-4xl md:text-5xl font-semibold text-red-400">Our Customers</h2>
+    <section className="py-12 bg-white">
+      <div className="text-center mb-13">
+        <h2 className="text-3xl md:text-4xl font-bold text-red-400 mb-2">
+          Our Customers
+        </h2>
+        <p className="text-gray-600 text-sm md:text-base">
+          Trusted by leading companies across industries
+        </p>
       </div>
 
-      {/* Carousel Container */}
-      <div className="relative overflow-hidden">
-        {/* Left Button */}
-        <button
-          onClick={() => nudge('left')}
-          className="btn btn-circle btn-outline btn-error absolute left-0 top-1/2 -translate-y-1/2 z-10"
-        >
-          <ChevronLeft className="w-6 h-6" />
-        </button>
-
-        {/* Right Button */}
-        <button
-          onClick={() => nudge('right')}
-          className="btn btn-circle btn-outline btn-error absolute right-0 top-1/2 -translate-y-1/2 z-10"
-        >
-          <ChevronRight className="w-6 h-6" />
-        </button>
-
-        {/* Scrollable Logo Rail */}
-        <div
-          ref={railRef}
-          className="flex gap-16 px-12 overflow-x-auto scroll-smooth scrollbar-hide"
-          onWheel={(e) => {
-            if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-              e.preventDefault();
-              railRef.current?.scrollBy({ left: e.deltaY });
-            }
-          }}
-        >
-          {rail.map(({ src, alt }, idx) => (
-            <div
-              key={`${alt}-${idx}`}
-              className="shrink-0 flex items-center justify-center w-48 h-28 relative"
-            >
-              <Image
-                src={src}
-                alt={alt}
-                fill
-                className="object-contain p-2 transition duration-300"
-                priority
-              />
+      <div className="slider-container px-4 md:px-10">
+        <Slider {...settings}>
+          {logos.map((logo) => (
+            <div key={logo.alt} className="flex justify-center items-center">
+              <div className="w-40 h-24 md:w-48 md:h-28 lg:w-56 lg:h-32 flex justify-center items-center bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="w-full h-full object-contain p-2"
+                />
+              </div>
             </div>
           ))}
-        </div>
+        </Slider>
       </div>
     </section>
   );
 }
+
+export default CustomersSection;

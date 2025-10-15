@@ -7,6 +7,25 @@ import ContactComponent from '../contact/contactcomponent';
 import { ArrowForward } from '@mui/icons-material';
 import CustomersSection from '@/components/ourcustomers';
 
+
+const slides = [
+    {
+      title: "SIEMENS PRODUCTS",
+      description: "All Siemens products like plc, hmi, AC drives & motors etc",
+      imageUrl: "https://atechnology.in/wp-content/uploads/2023/04/Siemens.jpg",
+    },
+    {
+      title: "B&R PRODUCTS",
+      description: "All B&R products like plc, hmi, drives & motors etc",
+      imageUrl: "https://www.br-automation.com/fileadmin/Netzwerk_u_Feldbusmodule-430574b1.jpg",
+    },
+     {
+      title: "CONTROL PANEL",
+      description: "Empowering industries with smart, efficient automation.",
+      imageUrl: "https://atechnology.in/wp-content/uploads/2023/04/Control-panel.jpg",
+    },
+  ];
+
 const products = [
   {
     title: 'Siemens',
@@ -31,11 +50,11 @@ const products = [
 export default function Products() {
   return (
     <div className="bg-white text-gray-800">
-      <PageBanner
-        title="All Products"
-        description="Siemens , B&R  & Control Panel"
-        imageUrl="https://atechnology.in/wp-content/uploads/2023/04/plc-1.jpg"
-      />
+
+      {/* banner */}
+      <div className='bg-white'>
+        <PageBanner slides={slides}/>
+      </div>
 
       {/* CourseCardSection */}
       <div className="max-w-8xl mx-auto px-6 md:px-12 py-18">

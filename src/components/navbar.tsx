@@ -99,14 +99,16 @@ const Navbar = () => {
       {/* Main Navbar */}
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{ justifyContent: 'space-between' }}>
-          <Box sx={{ px: 1, py: 1 }}>
-            <Image
-              src="/Velocity-ALogo2.png"
-              alt="Logo"
-              width={160}
-              height={50}
-              style={{ objectFit: 'contain' }}
-            />
+          <Box sx={{ px: 0, py: 1.5 }}>
+           <a href="/">
+             <Image
+                src="/Velocity-ALogo2.png"
+                alt="Logo"
+                width={175}
+                height={70}
+                style={{ objectFit: 'contain' }}
+              />
+            </a>    
           </Box>
 
           {isMobile ? (

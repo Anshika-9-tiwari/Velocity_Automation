@@ -19,6 +19,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Velocity Automation",
   description: "Automation Services and Solutions for Industrial Applications",
+  icons:{
+  icon: '/Velocity-ALogo2.png'
+ },
 };
 
 export default function RootLayout({

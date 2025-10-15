@@ -9,6 +9,23 @@ import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import CustomersSection from '@/components/ourcustomers';
 
+const slides = [
+  {
+    title: "Our Machine Monitoring",
+    description: "Customized industrial automation to boost productivity.",
+    imageUrl: "https://i.pinimg.com/736x/01/08/68/01086883bf3541a11e1d28362842d7ee.jpg",
+  },
+    {
+    title: "Machine Monitoring Solutions",
+    description: "Empowering industries with smart, efficient automation.",
+    imageUrl: "/machine-factory.jpeg",
+  },
+  {
+    title: "Tailored Engineering Expertise",
+    description: "Customized industrial automation to boost productivity.",
+    imageUrl: "/energy.webp",
+  },
+];
 
 const Industries = () => {
   const featureData = [
@@ -28,11 +45,10 @@ const Industries = () => {
 
   return (
     <div className="bg-white text-gray-800 overflow-hidden">
-        <PageBanner
-          title="Machine Monitoring"
-          description='Maximizing Output, Minimizing Downtime'
-          imageUrl="/ai-based.webp" 
-        />
+      {/* banner */}
+      <div>
+        <PageBanner slides={slides} />
+      </div>
 
       <div className="px-6 md:px-16 py-12 ">
         {/* Overview Section */}
@@ -55,7 +71,7 @@ const Industries = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="max-w-8xl mx-auto px-1 md:px-12 py-16 "
+          className="max-w-8xl mx-auto px-1 md:px-12 py-14 "
         >
           <h1 className="text-2xl font-semibold text-blue-900 mb-10 ">Industries across various sectors face a wide range of challenges. These challenges can vary depending on the industry and its specific circumstances, but some common challenges faced by industries include:!</h1>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-5  ">

@@ -7,16 +7,34 @@ import ContactComponent from '../../contact/contactcomponent'
 import PageBanner from '@/components/pageBanner';
 import CustomersSection from '@/components/ourcustomers';
 
+const slides = [
+    {
+      title: "Control Panel",
+      description: "Our custom-designed industrial control panels provide reliable, & efficient automation control.",
+      imageUrl: "https://i.pinimg.com/1200x/1b/71/c7/1b71c7fb80ecf94dd51ce02912b4cc60.jpg",
+    },
+    {
+      title: "Functions of a Control Panel",
+      description: "Controlling machinery through PLCs and relays.",
+      imageUrl: "https://atechnology.in/wp-content/uploads/2023/04/Control-panel.jpg",
+    },
+     {
+      title: "PLC Control Panel",
+      description: "We focus on maximizing our customer’s impact by providing high-quality.",
+      imageUrl: "/controlsystem.jpg",
+    },
+  ];
+
+
 const ControlPanel = () => {
 
   return (
     <div className="bg-white text-gray-900 overflow-x-hidden">
+
       {/* Banner */}
-       <PageBanner
-        title="Control Panel"
-        description=''
-        imageUrl="/controlpanel.jpeg" 
-      />
+      <div>
+        <PageBanner slides={slides} />
+      </div>
 
       <div className="max-w-8xl mx-auto px-6 md:px-12 py-12 bg-base-50">
         <h1 className="text-3xl font-semibold text-green-600">Control Panel</h1>

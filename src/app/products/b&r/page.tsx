@@ -5,6 +5,29 @@ import ContactComponent from '../../contact/contactcomponent';
 import { motion } from 'framer-motion';
 import CustomersSection from '@/components/ourcustomers';
 
+const slides = [
+    {
+      title: "B&R  PLC",
+      description: "We serve all B&R  PLC like X20 System, etc.",
+      imageUrl: "https://www.br-automation.com/fileadmin/X20MM4456_X67SM2436_Schrittmotor_WEISS-6d5df77e.jpg",
+    },
+    {
+      title: "B&R  HMI",
+      description: "All B&R  HMI Like- Automation Panel multi-touch, etc.",
+      imageUrl: "https://www.br-automation.com/fileadmin/Automation_Panel_930_white-8c980af2.jpg",
+    },
+     {
+      title: "B&R Motion Control",
+      description: "all B&R  Motion Control like  8LVA and 8WSA compact servo motors etc.",
+      imageUrl: "https://www.br-automation.com/fileadmin/Motion_Brochure_-_page_5-e5738877.jpg",
+    },
+    {
+      title: "B&R I/O System",
+      description: "all B&R  I/O System  like X20 System Coated X20 systems, etc.",
+      imageUrl: "https://www.br-automation.com/fileadmin/X20DI9371_Block_Dreiteilung_WEISS-1ec2f3bd.jpg",
+    },
+  ];
+
 const BandR = () => {
   const products = [
   {
@@ -29,13 +52,12 @@ const BandR = () => {
   },
   
 ];
+
   return (
     <div className="bg-white text-gray-800">
-      <PageBanner
-        title="All B&R Products"
-        description='PLCs, HMI, Motion Control etc '
-        imageUrl="https://i.pinimg.com/736x/56/d8/a1/56d8a14df98686062ee2367a10514052.jpg" 
-      />
+     <div className='bg-white'>
+       <PageBanner slides={slides}/>
+     </div>
 
      {/*CardSection */}
       <div className="max-w-8xl mx-auto px-6 md:px-12 py-18">

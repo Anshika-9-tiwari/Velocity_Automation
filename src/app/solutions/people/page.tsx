@@ -5,14 +5,25 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
+const slides = [
+    {
+      title: "Innovative Automation Solutions",
+      description: "Empowering industries with smart, efficient automation.",
+      imageUrl: "/Group_Engineer.jpg",
+    },
+    {
+      title: "Tailored Engineering Expertise",
+      description: "Customized industrial automation to boost productivity.",
+      imageUrl: "https://i.pinimg.com/1200x/1b/71/c7/1b71c7fb80ecf94dd51ce02912b4cc60.jpg",
+    },
+  ];
+
 export default function PeopleSolution() {
   return (
     <>
-      <PageBanner
-        title="People"
-        description="Innovating Solutions for people"
-        imageUrl="/Group_Engineer.jpg"
-      />
+      <div>
+        <PageBanner slides={slides} />
+      </div>
 
       {/* Intro */}
       <Box sx={{ py: 8 , bgcolor:'white', color:'black'}}>
@@ -95,8 +106,8 @@ export default function PeopleSolution() {
               src="/PLC_SCADA.jpeg"
               alt="PLC SCADA"
               width={530}
-              height={200}
-              className="rounded-tl-3xl  rounded-br-3xl mt-4 w-full h-85 object-cover shadow-lg"
+              height={250}
+              className="rounded-tl-3xl  rounded-br-3xl mt-4 w-full h-96 object-cover shadow-lg"
             />
           </div>
         </motion.div>

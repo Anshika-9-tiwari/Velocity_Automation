@@ -10,6 +10,30 @@ import ContactComponent from '../../contact/contactcomponent'
 import { PiSealCheckBold } from 'react-icons/pi';
 import PageBanner from '@/components/pageBanner';
 
+const slides = [
+  {
+    title: "AI-Powered Machine Vision Systems",
+    description: "Revolutionizing industrial inspection with intelligent image recognition and analytics.",
+    imageUrl: "/ai-based.webp",
+  },
+  {
+    title: "Precision Quality Inspection",
+    description: "Enhancing production efficiency through automated defect detection and real-time monitoring.",
+    imageUrl: "/industry-control.jpg",
+  },
+  {
+    title: "Smart Cameras & Deep Learning Vision",
+    description: "Empowering manufacturing with edge-based visual intelligence and accuracy.",
+    imageUrl: "/energy.webp",
+  },
+  {
+    title: "Visual Data for Predictive Analytics",
+    description: "Transforming visual insights into actionable data for smarter operations.",
+    imageUrl: "/object-presence.jpg",
+  },
+];
+
+
 const featureItem = (text: string, index: number) => (
   <li key={index} className="flex items-start gap-2 mb-2">
     <PiSealCheckBold className="text-green-500 mt-1" />
@@ -71,12 +95,10 @@ const SmartVision = () => {
 
   return (
     <div className="bg-white text-gray-900 overflow-hidden">
-      {/* Banner */}
-       <PageBanner
-        title="Smart Vision"
-        description='Transforming manufacturing with smart vision 4.0 integration'
-        imageUrl="https://i.pinimg.com/736x/a0/d3/cf/a0d3cf6c661b56c511e57403f001442f.jpg" 
-      />
+      {/* banner */}
+      <div>
+        <PageBanner slides={slides} />
+      </div>
 
       {/* Cards */}
       <SmartWorkerCard

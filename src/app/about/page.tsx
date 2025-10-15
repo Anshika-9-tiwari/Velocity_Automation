@@ -5,11 +5,35 @@ import PageBanner from '@/components/pageBanner';
 import IndustryFeatureSection from '@/components/industryfeature';
 import { motion } from 'framer-motion';
 
+const slides = [
+  {
+    title: "About Velocity Automation",
+    description: "Driving industrial innovation with smart automation solutions.",
+    imageUrl: "/Group_Engineer.jpg",
+  },
+  {
+    title: "Empowering Industries",
+    description: "Delivering cutting-edge control and automation technology.",
+    imageUrl: "/controlsystem.jpg",
+  },
+  {
+    title: "Engineering Excellence",
+    description: "Precision, innovation, and reliability in every automation project.",
+    imageUrl: "/Group_Engineer.jpg",
+  },
+  {
+    title: "Trusted by Industry Leaders",
+    description: "Partnering with top manufacturers for a smarter tomorrow.",
+    imageUrl: "https://i.pinimg.com/1200x/71/90/0b/71900b6cc1c6b7e62f7712cdf0933dca.jpg",
+  },
+];
+
+
 const featureData = [
     {
     title: 'Our Office',
     image: '/velocityautomationoffice.jpg',
-    desc: `With offices strategically located in India and Singapore, a proven track record of providing offshore design and development would be significant for cost optimization to meet the customer’s business objectives with ease.`,
+    desc: `With offices strategically located in India a proven track record of providing offshore design and development would be significant for cost optimization to meet the customer’s business objectives with ease.`,
     extra: `Velocity Automation's objective is to establish itself as a leader in the global automation market by providing high-quality solutions to industries worldwide.`,
   },
   {
@@ -27,8 +51,20 @@ const featureData = [
   {
     title: 'Our Expertise',
     image: '/controlsystem.jpg',
-    desc: `(1) PLC, SCADA, HMI & DCS based automation, (2) End-to-end factory & process automation, (3) PLC/DCS application logic design, development & testing, (4) IoT-enabled monitoring & control , (5) Remote monitoring & predictive maintenance systems , (6) Siemens, Allen Bradley, Schneider, Mitsubishi platforms, (7) Advanced simulation, testing, and commissioning ,  (8) SCADA/HMI Control Panel installation, commissioning and maintenance, (9) Automotive, Food & Beverages, Manufacturing, Warehouse & Logistics , (10) Annual maintenance contracts (AMC).`,
-    extra: `Also, Vision-based system to monitor the usage of personal protective equipment (PPE) in a every factory for worker’s safety and health....`,
+    desc:``,
+    listItems:[
+      "PLC, SCADA, HMI & DCS based automation,",
+      "End-to-end factory & process automation," ,
+      "PLC/DCS application logic design, development & testing," ,
+      "IoT-enabled monitoring & control , ",
+      "Remote monitoring & predictive maintenance systems ,",
+      "Siemens, Allen Bradley, Schneider, Mitsubishi platforms,",
+      "Advanced simulation, testing, and commissioning ,",
+      "SCADA/HMI Control Panel installation, commissioning and maintenance,",
+      "Automotive, Food & Beverages, Manufacturing, Warehouse & Logistics,",
+      " Annual maintenance contracts (AMC)." 
+    ],
+    extra: ``,
   },
   {
     title: 'Specialisation',
@@ -41,11 +77,9 @@ const featureData = [
 const About = () => {
   return (
     <div className="bg-white text-gray-800">
-      <PageBanner
-        title="About Us"
-        description='Transforming manufacturing with us through innovative automation solutions.'
-        imageUrl="https://i.pinimg.com/1200x/c7/de/ba/c7debaa6c4f2daa37e97b98629d1fad0.jpg" 
-      />
+      <div className='bg-white'>
+        <PageBanner slides={slides} />
+      </div>
 
       <div className="px-6 md:px-16 py-12">
         <div className="mb-12">

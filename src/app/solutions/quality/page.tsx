@@ -14,14 +14,34 @@ import { PiTrendUpFill, PiHandTap } from 'react-icons/pi';
 import PageBanner from '@/components/pageBanner';
 import ContactComponent from '../../contact/contactcomponent';
 
+
+const slides = [
+    {
+      title: "Innovative Automation Solutions",
+      description: "Empowering industries with smart, efficient automation.",
+      imageUrl: "https://img.freepik.com/free-vector/stylish-glowing-digital-red-lines-banner_1017-23964.jpg?semt=ais_hybrid&w=740&q=80",
+    },
+     {
+      title: "Innovative Automation Solutions",
+      description: "Empowering industries with smart, efficient automation.",
+      imageUrl: "https://t3.ftcdn.net/jpg/05/14/95/12/360_F_514951224_2dxMLbIw5qNRdPGD003chpbVcxWtcp7K.jpg",
+    },
+    {
+      title: "Tailored Engineering Expertise",
+      description: "Customized industrial automation to boost productivity.",
+      imageUrl: "https://t4.ftcdn.net/jpg/05/54/46/89/360_F_554468927_iwU3VYIjsaeopAb0WPYxVf21TloEhTEj.jpg",
+    },
+  ];
+
+
 export default function QualityInspection() {
   return (
       <>
-        <PageBanner
-          title="Quality Inspections"
-          description='Transforming manufacturing with quality  4.0 integration'
-          imageUrl="https://i.pinimg.com/736x/8a/91/6b/8a916b99ed59a38043ea5c88c1eca7ab.jpg" 
-        />
+       
+        {/* banner */}
+        <div>
+          <PageBanner slides={slides} />
+        </div>
 
         <div className="px-4 md:px-8 py-10 space-y-16 bg-white">
           {/* Overview Section */}

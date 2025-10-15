@@ -6,6 +6,30 @@ import IndustryFeatureSection from '@/components/industryfeature';
 import { motion } from 'framer-motion';
 import CustomersSection from '@/components/ourcustomers';
 
+const slides = [
+  {
+    title: "Driving Innovation in Automotive",
+    description: "Revolutionizing vehicle production with intelligent automation & robotics.",
+    imageUrl: "https://i.pinimg.com/1200x/28/c0/9e/28c09e21510ef93a13a5103ba15941b1.jpg",
+  },
+  {
+    title: "Precision Engineering at Every Step",
+    description: "Delivering high-quality, consistent performance through smart assembly systems.",
+    imageUrl: "https://i.pinimg.com/1200x/61/e6/47/61e6472de10908daf4b14196c4d7a15a.jpg",
+  },
+  {
+    title: "Smart Robotics for Modern Plants",
+    description: "Enhancing speed, safety, & reliability in automotive production lines.",
+    imageUrl: "https://i.pinimg.com/736x/df/f6/7a/dff67a40bfce3904534ae748312837c7.jpg",
+  },
+  {
+    title: "Empowering the Future of Mobility",
+    description: "Transforming the automotive industry with data-driven automation & innovation.",
+    imageUrl: "https://i.pinimg.com/736x/a6/70/5e/a6705e629ee67710b88ec3a3cc5cf91f.jpg",
+  },
+];
+
+
 const Industries = () => {
   const featureData = [
     {
@@ -36,11 +60,9 @@ const Industries = () => {
 
   return (
     <div className="bg-white text-gray-800">
-      <PageBanner
-        title="Automotive Industry"
-        description="Transforming manufacturing with Automotive Industry 4.0 integration"
-        imageUrl="https://i.pinimg.com/736x/97/6a/4d/976a4d0522e07697ab5b0afed2752f67.jpg"
-      />
+      <div>
+        <PageBanner slides={slides} />
+      </div>
 
       <div className="px-6 md:px-16 py-12">
         {/* Overview Section */}

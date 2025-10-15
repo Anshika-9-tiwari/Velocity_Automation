@@ -5,6 +5,30 @@ import PageBanner from '@/components/pageBanner';
 import IndustryFeatureSection from '@/components/industryfeature';
 import { motion } from 'framer-motion';
 
+const slides = [
+  {
+    title: "Precision in Food Processing",
+    description: "Delivering efficiency & safety with modern control systems & robotics.",
+    imageUrl: "https://i.pinimg.com/1200x/d5/18/ea/d518ea5c54db0b561fc8ccd892bc94f4.jpg",
+  },
+  {
+    title: "Smart Automation for Food & Beverage Plants",
+    description: "Enhancing quality, & hygiene through intelligent automation.",
+    imageUrl: "/Foodbeverages.jpeg",
+  },
+  {
+    title: "Smarter Packaging Solutions",
+    description: "Streamlining packaging operations with automated & vision-based systems.",
+    imageUrl: "https://i.pinimg.com/1200x/1f/79/75/1f7975c9092041d88e93a7e26ee79631.jpg",
+  },
+  {
+    title: "Ensuring Quality & Compliance",
+    description: "Supporting food safety standards with digital monitoring & traceability.",
+    imageUrl: "https://i.pinimg.com/1200x/7e/75/59/7e75595fa40e1abb5e6bb0b7f0f638b1.jpg",
+  },
+];
+
+
 const featureData = [
   {
     title: 'Worker health and safety',
@@ -20,13 +44,13 @@ const featureData = [
   },
   {
     title: 'Packaging Line Automation',
-    image: '/object-segmentation.jpeg',
+    image: 'https://i.pinimg.com/736x/ce/50/06/ce500605fff37d90ca4f6d4e7b51f22d.jpg',
     desc: `Automated packaging systems streamline bottling, sealing, and labeling operations in high-speed food production environments.`,
     extra: `Our smart automation boosts throughput, improves hygiene, and reduces operational costs in bakery, snack, and beverage lines.`,
   },
   {
     title: 'Sorting and Counting',
-    image: '/bottle-sort.jpg',
+    image: '/object-segmentation.jpeg',
     desc: `Automated sorting and counting in food manufacturing is a crucial process to ensure product quality, safety, and efficiency. `,
     extra: `It involves the use of various technologies and systems to sort and count food items accurately like Weight-based Sorting, Colour and Size Sorting, OCR, Barcode Scanning etc.`,
   },
@@ -35,12 +59,13 @@ const featureData = [
 const FoodAndBeverages = () => {
   return (
     <div className="bg-white text-gray-800">
-      <PageBanner
-        title="Food and Beverages Industry"
-        description='Transforming manufacturing with Food and Beverages Industry 4.0 integration'
-        imageUrl="https://i.pinimg.com/736x/7e/75/59/7e75595fa40e1abb5e6bb0b7f0f638b1.jpg" 
-      />
+     
+      {/* banner */}
+      <div>
+        <PageBanner slides={slides}/>
+      </div>
 
+      {/* Overview */}
       <div className="px-6 md:px-16 py-12">
         <div className="mb-12">
           <h1 className="text-3xl font-bold mb-4">Overview</h1>

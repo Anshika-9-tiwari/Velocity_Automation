@@ -6,6 +6,30 @@ import IndustryFeatureSection from '@/components/industryfeature';
 import { motion } from 'framer-motion';
 import Videofile from '../steel/videofile';
 
+const slides = [
+  {
+    title: "Smart Steel Manufacturing",
+    description: "Empowering steel plants with intelligent automation & real-time monitoring.",
+    imageUrl: "/steelplant.jpg",
+  },
+  {
+    title: "Precision Engineering in Metalworks",
+    description: "Enhancing quality & efficiency through advanced automation systems.",
+    imageUrl: "/industry.jpg",
+  },
+  {
+    title: "Industrial Automation for Steel Plants",
+    description: "Integrating PLC & SCADA solutions for seamless steel production processes.",
+    imageUrl: "/steelSize.jpg",
+  },
+  {
+    title: "Efficiency Through Smart Control",
+    description: "Optimizing energy usage & process control in steel industries.",
+    imageUrl: "https://i.pinimg.com/736x/f4/c2/82/f4c282375f3951256c8a03f5ddc8ae6c.jpg",
+  },
+];
+
+
 const featureData = [
   {
     title: 'Steel Industry Overview',
@@ -31,12 +55,13 @@ const featureData = [
 const Steel = () => {
   return (
     <div className="bg-white text-gray-800 overflow-hidden">
-      <PageBanner
-        title="Steel Industry"
-        description='Transforming manufacturing with Steel Industry 4.0 integration'
-        imageUrl="/steelplant.jpg" 
-      />
+     
+      {/* Banner-section */}
+      <div>
+        <PageBanner slides={slides}/>
+      </div>
 
+      {/* Overview */}
       <div className="px-6 md:px-16 py-12">
         <div className="mb-12">
           <h1 className="text-3xl font-bold mb-4">Overview</h1>

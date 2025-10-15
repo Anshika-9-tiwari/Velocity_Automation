@@ -5,6 +5,30 @@ import ContactComponent from '../../contact/contactcomponent';
 import IndustryFeatureSection from '@/components/industryfeature';
 import { motion } from 'framer-motion';
 
+const slides = [
+  {
+    title: "Intelligent Manufacturing Automation",
+    description: "Transforming production with smart, & efficient automation systems.",
+    imageUrl: "/steelplant.jpg",
+  },
+  {
+    title: "Precision Engineering at Scale",
+    description: "Optimizing every manufacturing process with accuracy & speed.",
+    imageUrl: "https://third-eye.ai/wp-content/uploads/2023/10/20075-e1700196665594.webp",
+  },
+  {
+    title: "Smart Machines for Smart Production",
+    description: "Leveraging IoT & AI to boost operational efficiency & uptime.",
+    imageUrl: "https://cdn.pixabay.com/photo/2024/07/28/12/01/ai-generated-8927297_1280.jpg",
+  },
+  {
+    title: "Innovation Driving Industry 4.0",
+    description: "Empowering manufacturers with digital transformation.",
+    imageUrl: "https://third-eye.ai/wp-content/uploads/2023/10/interior-view-steel-factory-1-scaled-e1700196723875.webp",
+  },
+];
+
+
 const ManufacturingIndustry = () => {
   const featureData = [
     {
@@ -35,11 +59,13 @@ const ManufacturingIndustry = () => {
 
   return (
     <div className="bg-white text-gray-800">
-      <PageBanner
-        title="Manufacturing Industry"
-        description="Transforming manufacturing with Manufacturing Industry 4.0 integration"
-        imageUrl="https://i.pinimg.com/736x/29/dd/37/29dd37cf8df4e5c58693e53a5310d53d.jpg"
-      />
+
+      {/* banner-section */}
+      <div>
+        <PageBanner slides={slides}/>
+      </div>
+
+      {/* Overview */}
       <div className="px-6 md:px-16 py-12">
         <div className="mb-12">
           <h1 className="text-3xl font-bold mb-4">Overview</h1>

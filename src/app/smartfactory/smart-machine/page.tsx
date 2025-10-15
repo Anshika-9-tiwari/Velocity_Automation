@@ -8,6 +8,25 @@ import ContactComponent from '../../contact/contactcomponent';
 import { PiSealCheckBold } from 'react-icons/pi';
 import PageBanner from '@/components/pageBanner';
 
+const slides = [
+  {
+    title: "Smart Machine Solutions",
+    description: "Enhancing efficiency with intelligent automation systems.",
+    imageUrl: "/ai-based.webp",
+  },
+  {
+    title: "Precision Engineering",
+    description: "Advanced machine control for optimized performance.",
+    imageUrl: "/energy.webp",
+  },
+  {
+    title: "Industrial Automation Excellence",
+    description: "Innovating reliable and adaptive machine systems.",
+    imageUrl: "/condition-monitoring.jpeg",
+  },
+];
+
+
 const featureItem = (text: string, index: number) => (
   <li key={index} className="flex items-start gap-2 mb-2">
     <PiSealCheckBold className="text-green-500 mt-1" />
@@ -19,7 +38,7 @@ const SmartMachine = () => {
   const featureData = [
     {
       title: 'Real-Time Machine Monitoring',
-      image: '/Machine-monitoring.png',
+      image: '/dashboard.jpg',
       desc: `Machine Monitoring helps industries improve productivity by tracking real-time performance. Our solution can be used for machine monitoring of different types of machines like stamping, blanking, reeling, peeling, welding, and die casting...`,
       features: [
         'Live machine utilization data',
@@ -70,12 +89,12 @@ const SmartMachine = () => {
 
   return (
     <div className="bg-white text-gray-800 overflow-hidden">
-      <PageBanner
-        title="Smart Machine"
-        description="Transforming manufacturing with smart machine 4.0 integration"
-        imageUrl="https://i.pinimg.com/736x/a0/d3/cf/a0d3cf6c661b56c511e57403f001442f.jpg"
-      />
-
+      {/* banner */}
+      <div>
+        <PageBanner slides={slides} />
+      </div>
+      
+      {/* CardSection */}
       <SmartFactoryCard
         cardData={featureData.map(({ image, title }) => ({ image, title }))}
         pageTitle="Smart Machine Modules"

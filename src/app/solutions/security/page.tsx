@@ -13,6 +13,24 @@ import ContactComponent from '../../contact/contactcomponent'
 import { motion } from 'framer-motion';
 import PageBanner from '@/components/pageBanner';
 
+const slides = [
+  {
+    title: "Smart Gate & ANPR",
+    description: "Empowering industries with smart, efficient automation.",
+    imageUrl: "/smartgate.jpeg",
+  },
+  {
+    title: "Boundary Management System",
+    description: "The system streamlines operations with automation, enhancing safety & compliance.",
+    imageUrl: "/Warehousemanage.jpeg",
+  },
+    {
+    title: "Shoplifting Detection Solutions",
+    description: "Prevent theft and revenue loss with AI-powered & detection systems.",
+    imageUrl: "/soflifting.jpeg",
+  },
+];
+
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -21,13 +39,11 @@ const fadeUp = {
 const Security = () => {
   return (
     <>
-      {/* Banner Section */}
-      <PageBanner
-        title="Security"
-        description='Transforming Security with Smart Gate & ANPR  integration'
-        imageUrl="https://i.pinimg.com/736x/dd/cc/06/ddcc06a7e0ba4d3aec78b75751c987bd.jpg" 
-      />
-  
+      {/* banner */}
+      <div>
+        <PageBanner slides={slides} />
+      </div>
+
       {/* Overview Section */}
       <motion.div 
         className="max-w-7xl mx-auto py-10 px-0 bg-white"

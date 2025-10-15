@@ -25,7 +25,7 @@ const videofile = () => {
         <div className="relative w-full overflow-hidden rounded-2xl shadow-xl border border-gray-200">
           <div className="aspect-w-16 aspect-h-5">
             <video
-              className="w-full h-1/2 object-cover"
+              className="w-full min-h-9/12 object-cover"
               controls
               // autoPlay
               muted
